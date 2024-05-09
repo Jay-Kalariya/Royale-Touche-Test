@@ -1,10 +1,70 @@
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
+import fs from "fs";
+import multer from "multer";
+const dotenv = require("dotenv");
+dotenv.config();
+
+
+// const Storage = multer.diskStorage({
+//   destination: function (req, file, cb) {
+//     cb(null, "./uploads");
+//      // Define your upload directory here
+//   },
+//   filename: function (req, file, cb) {
+//     cb(null, file.fieldname + "-" + Date.now() + "_" + file.originalname);
+//   },
+// });
+
+// const upload = multer({
+//   storage: Storage,
+// }).array("files", 4); 
+// Assuming you have a maximum of 4 file inputs
 
 export async function POST(request) {
-  try {
-    const { fullName, email, Phone, Whatsapp, Address, Pincode,City, District,State,Dealer_Name,Category,Product_Name_0,Product_Name_1,Product_Name_2,Product_Name_3,sheets,sheets_0,sheets_1,sheets_2,No_of_thickness_0,No_of_thickness_1,No_of_thickness_2,No_of_thickness_3,Invoice_File,Invoice_File1,Invoice_File2,Invoice_File3} = await request.json();
+  try 
+  {
+    // await new Promise((resolve, reject) => {
+    //   upload(request, null, function (err) {
+    //     if (err) {
+    //       console.log(err);
+    //       reject(err);
+    //     } else {
+    //       resolve();
+    //     }
+    //   });
+    // });
 
+    const {
+      fullName,
+      email,
+      Phone,
+      Whatsapp,
+      Address,
+      Pincode,
+      City,
+      District,
+      State,
+      Dealer_Name,
+      Category,
+      Product_Name_0,
+      Product_Name_1,
+      Product_Name_2,
+      Product_Name_3,
+      sheets,
+      sheets_0,
+      sheets_1,
+      sheets_2,
+      No_of_thickness_0,
+      No_of_thickness_1,
+      No_of_thickness_2,
+      No_of_thickness_3,
+      Invoice_File,
+      Invoice_File1,
+      Invoice_File2,
+      Invoice_File3,
+    } = await request.json();
+    // const fileNames = request.files.map((file) => file.filename);
     // Create Nodemailer transporter
     const transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST,
@@ -56,11 +116,23 @@ export async function POST(request) {
             </ul>
         </div>
       `,
+      // attachments: fileNames.map((fileName) => ({
+      //   path: `./uploads/${fileName}`,
+      // })),
     };
 
     // Send email
     await transporter.sendMail(mailOptions);
-
+    // Delete uploaded files after sending email
+    // fileNames.forEach((fileName) => {
+    //   fs.unlink(`./uploads/${fileName}`, (err) => {
+    //     if (err) {
+    //       console.error("Error deleting file:", err);
+    //     } else {
+    //       console.log("File deleted");
+    //     }
+    //   });
+    // });
     // Return success response
     return NextResponse.json(
       { message: "Email Sent Successfully" },
