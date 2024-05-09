@@ -462,7 +462,6 @@ const FormCommon = () => {
               )}
             </div>
           </div>
-          {/*  category*/}
           {sections.map((section, index) => {
             console.log("section", section);
             const isFirstSection = index === 0;
@@ -515,7 +514,6 @@ const FormCommon = () => {
                     />
                   </div>
                 </div>
-                {/* sheets */}
                 <div className={styles.RT_Form_Flex}>
                   <div className={styles.RT_Form_field}>
                     <label
@@ -573,7 +571,6 @@ const FormCommon = () => {
           <div className={styles.Form_btn_Outer}>
             <div onClick={addSection} class="button-57" role="button">
               <span className="text">
-                {/* <div className=""> */}
                 <svg
                   clip-rule="evenodd"
                   fill-rule="evenodd"
@@ -588,22 +585,18 @@ const FormCommon = () => {
                     fill-rule="white"
                   />
                 </svg>
-                {/* </div> */}
                 ADD MORE
               </span>
               <span>CLICK TO ADD MORE</span>
             </div>
           </div>
         </div>
-
-        {/* Upload File */}
         <div className={styles.invoice_upload_container}>
           <div>
             <p className={styles.upload_invoice_text}>
               Click here to upload invoice*
             </p>
           </div>
-          {/* Invoice */}
           <div className={styles.invoice_Main}>
             <div className={styles.inovoice_inner_flex}>
               <div
@@ -735,9 +728,6 @@ const FormCommon = () => {
               </div>
             </div>
           </div>
-
-          
-          {/* invoice ends */}
           <div className={styles.form_last_section}>
             <div className={styles.form_last_section_content}>
               <div className={styles.check}>
@@ -747,9 +737,7 @@ const FormCommon = () => {
                   id="agreeTerms"
                   name="agreeTerms"
                   value={values.agreeTerms}
-                  // checked={values.agreeTerms}
                   onChange={handleChange}
-                  // required
                   checked={values.agreeTerms}
                 />
               </div>
@@ -758,7 +746,6 @@ const FormCommon = () => {
                 Click here to agree to{" "}
                 <span
                   className={styles.forms_terms_condition}
-                  // onClick={() => router.push("/terms_and_condition")}
                 >
                   <Link href="/terms-and-condition" target="_blank">
                     Terms And Conditions
@@ -770,29 +757,17 @@ const FormCommon = () => {
               <p className="error">{errors.agreeTerms}</p>
             )}
           </div>
-          {/*  */}
           <div className={styles.Form_btn_Outer_Main}>
             <button
               class="button-57"
               role="button"
               onClick={() => {
                 handleSubmit();
-                // showErrorToast();
-                // submitMessage();
               }}
-              // disabled={!values.agreeTerms}
             >
               <span class="text"> Submit</span>
               <span> Submit</span>
             </button>
-            {/* <div className={styles.submit} >
-              {submit && "Form Submitted Successfully"}
-            </div> */}
-            {/* <button className={styles.Form_btn_inner} onClick={notify}>
-              Submit
-            </button> */}
-            {/* <Toaster position="top-right" /> */}
-            {/* {formResponse.text === "OK" && ( */}
             <ToastContainer
               position="top-right"
               autoClose={3000}
@@ -806,9 +781,7 @@ const FormCommon = () => {
               theme="light"
               transition={Slide}
               className={"contactFormNotification"}
-              // progressStyle={{ background: "#f90" }}
             />
-            {/* )}  */}
           </div>
         </div>
       </form>
