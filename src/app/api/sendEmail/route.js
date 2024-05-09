@@ -6,35 +6,33 @@ const dotenv = require("dotenv");
 dotenv.config();
 
 
-// const Storage = multer.diskStorage({
-//   destination: function (req, file, cb) {
-//     cb(null, "./uploads");
-//      // Define your upload directory here
-//   },
-//   filename: function (req, file, cb) {
-//     cb(null, file.fieldname + "-" + Date.now() + "_" + file.originalname);
-//   },
-// });
+const Storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, "./uploads"); // Define your upload directory here
+  },
+  filename: function (req, file, cb) {
+    cb(null, file.fieldname + "-" + Date.now() + "_" + file.originalname);
+  },
+});
 
-// const upload = multer({
-//   storage: Storage,
-// }).array("files", 4); 
-// Assuming you have a maximum of 4 file inputs
+const upload = multer({
+  storage: Storage,
+}).single("file");
 
 export async function POST(request) {
-  try 
-  {
-    // await new Promise((resolve, reject) => {
-    //   upload(request, null, function (err) {
-    //     if (err) {
-    //       console.log(err);
-    //       reject(err);
-    //     } else {
-    //       resolve();
-    //     }
-    //   });
-    // });
-
+  try {
+    console.log("Request received:", request);
+    await new Promise((resolve, reject) => {
+      upload(request, null, function (err) {
+        if (err) {
+          console.log("Error uploading file:", err);
+          reject(err);
+        } else {
+          resolve();
+        }
+      });
+    });
+    console.log("File uploaded successfully");
     const {
       fullName,
       email,
@@ -63,8 +61,13 @@ export async function POST(request) {
       Invoice_File1,
       Invoice_File2,
       Invoice_File3,
-    } = await request.json();
-    // const fileNames = request.files.map((file) => file.filename);
+    } =  request.files || request.json();
+    if (!request.files) {
+      throw new Error("No files received");
+    }
+
+    
+    const fileNames = [request.file.filename]; 
     // Create Nodemailer transporter
     const transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST,
@@ -116,23 +119,21 @@ export async function POST(request) {
             </ul>
         </div>
       `,
-      // attachments: fileNames.map((fileName) => ({
-      //   path: `./uploads/${fileName}`,
-      // })),
+      attachments: fileNames.map((fileName) => ({
+        path: `./uploads/${fileName}`,
+      })),
     };
 
     // Send email
     await transporter.sendMail(mailOptions);
     // Delete uploaded files after sending email
-    // fileNames.forEach((fileName) => {
-    //   fs.unlink(`./uploads/${fileName}`, (err) => {
-    //     if (err) {
-    //       console.error("Error deleting file:", err);
-    //     } else {
-    //       console.log("File deleted");
-    //     }
-    //   });
-    // });
+    fs.unlink(`./uploads/${fileNames[0]}`, (err) => {
+      if (err) {
+        console.error("Error deleting file:", err);
+      } else {
+        console.log("File deleted");
+      }
+    });
     // Return success response
     return NextResponse.json(
       { message: "Email Sent Successfully" },

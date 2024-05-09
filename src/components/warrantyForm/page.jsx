@@ -38,21 +38,14 @@ const FormCommon = () => {
     ...category,
     index: index + 1,
   }));
-  
-  const chooseFile = (e) => {
+  const handleFileUpload = (e, index) => {
     const file = e.target.files[0];
-
     if (file) {
-      if (uploadedInvoice) {
-        alert("You can upload only one file.");
-        return;
-      }
       const isPDF = file.type === "application/pdf";
-
       const isSizeValid = file.size <= 10 * 1024 * 1024;
 
       if (isPDF && isSizeValid) {
-        setUploadedInvoice(file.name);
+        values[`Invoice_File${index}`] = file;
       } else {
         alert(
           "Invalid file. Please upload a PDF file with a maximum size of 10 MB."
@@ -60,69 +53,90 @@ const FormCommon = () => {
       }
     }
   };
-  const chooseFile1 = (e) => {
-    const file = e.target.files[0];
+  // const chooseFile = (e) => {
+  //   const file = e.target.files[0];
 
-    if (file) {
-      if (uploadedInvoice1) {
-        alert("You can upload only one file.");
-        return;
-      }
-      const isPDF = file.type === "application/pdf";
+  //   if (file) {
+  //     if (uploadedInvoice) {
+  //       alert("You can upload only one file.");
+  //       return;
+  //     }
+  //     const isPDF = file.type === "application/pdf";
 
-      const isSizeValid = file.size <= 10 * 1024 * 1024;
+  //     const isSizeValid = file.size <= 10 * 1024 * 1024;
 
-      if (isPDF && isSizeValid) {
-        setUploadedInvoice1(file.name);
-      } else {
-        alert(
-          "Invalid file. Please upload a PDF file with a maximum size of 10 MB."
-        );
-      }
-    }
-  };
-  const chooseFile2 = (e) => {
-    const file = e.target.files[0];
+  //     if (isPDF && isSizeValid) {
+  //       setUploadedInvoice(file.name);
+  //     } else {
+  //       alert(
+  //         "Invalid file. Please upload a PDF file with a maximum size of 10 MB."
+  //       );
+  //     }
+  //   }
+  // };
+  // const chooseFile1 = (e) => {
+  //   const file = e.target.files[0];
 
-    if (file) {
-      if (uploadedInvoice2) {
-        alert("You can upload only one file.");
-        return;
-      }
-      const isPDF = file.type === "application/pdf";
+  //   if (file) {
+  //     if (uploadedInvoice1) {
+  //       alert("You can upload only one file.");
+  //       return;
+  //     }
+  //     const isPDF = file.type === "application/pdf";
 
-      const isSizeValid = file.size <= 10 * 1024 * 1024;
+  //     const isSizeValid = file.size <= 10 * 1024 * 1024;
 
-      if (isPDF && isSizeValid) {
-        setUploadedInvoice2(file.name);
-      } else {
-        alert(
-          "Invalid file. Please upload a PDF file with a maximum size of 10 MB."
-        );
-      }
-    }
-  };
-  const chooseFile3 = (e) => {
-    const file = e.target.files[0];
+  //     if (isPDF && isSizeValid) {
+  //       setUploadedInvoice1(file.name);
+  //     } else {
+  //       alert(
+  //         "Invalid file. Please upload a PDF file with a maximum size of 10 MB."
+  //       );
+  //     }
+  //   }
+  // };
+  // const chooseFile2 = (e) => {
+  //   const file = e.target.files[0];
 
-    if (file) {
-      if (uploadedInvoice3) {
-        alert("You can upload only one file.");
-        return;
-      }
-      const isPDF = file.type === "application/pdf";
+  //   if (file) {
+  //     if (uploadedInvoice2) {
+  //       alert("You can upload only one file.");
+  //       return;
+  //     }
+  //     const isPDF = file.type === "application/pdf";
 
-      const isSizeValid = file.size <= 10 * 1024 * 1024;
+  //     const isSizeValid = file.size <= 10 * 1024 * 1024;
 
-      if (isPDF && isSizeValid) {
-        setUploadedInvoice3(file.name);
-      } else {
-        alert(
-          "Invalid file. Please upload a PDF file with a maximum size of 10 MB."
-        );
-      }
-    }
-  };
+  //     if (isPDF && isSizeValid) {
+  //       setUploadedInvoice2(file.name);
+  //     } else {
+  //       alert(
+  //         "Invalid file. Please upload a PDF file with a maximum size of 10 MB."
+  //       );
+  //     }
+  //   }
+  // };
+  // const chooseFile3 = (e) => {
+  //   const file = e.target.files[0];
+
+  //   if (file) {
+  //     if (uploadedInvoice3) {
+  //       alert("You can upload only one file.");
+  //       return;
+  //     }
+  //     const isPDF = file.type === "application/pdf";
+
+  //     const isSizeValid = file.size <= 10 * 1024 * 1024;
+
+  //     if (isPDF && isSizeValid) {
+  //       setUploadedInvoice3(file.name);
+  //     } else {
+  //       alert(
+  //         "Invalid file. Please upload a PDF file with a maximum size of 10 MB."
+  //       );
+  //     }
+  //   }
+  // };
 
   const initialValue = {
     fullName: "",
@@ -223,11 +237,25 @@ const FormCommon = () => {
   };
   const onSubmit = async (values, actions) => {
     try {
-      await axios.post("/api/sendEmail", values);
+      const formData = new FormData();
+      formData.append("file", values.Invoice_File);
+      formData.append("file", values.Invoice_File1);
+      formData.append("file", values.Invoice_File2);
+      formData.append("file", values.Invoice_File3);
+      formData.append("fullName", values.fullName);
+      formData.append("email", values.email);
+      await axios.post("/api/sendEmail", formData,
+        {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        }
+      );
       toast.success("Form Submitted Successfully...");
       console.log("Email sent successfully");
       setSubmit(true);
       actions.resetForm();
+      clearUploadedFile();
       setUploadedInvoice(null);
       setUploadedInvoice1(null);
       setUploadedInvoice2(null);
@@ -295,6 +323,7 @@ const FormCommon = () => {
 
       <form
         ref={form}
+        method="POST"
         onSubmit={(e) => {
           handleSubmit(e);  
           if (submit) {
@@ -615,10 +644,11 @@ const FormCommon = () => {
             </p>
           </div>
           <div className={styles.invoice_Main}>
-            <div className={styles.inovoice_inner_flex}>
+          {[...Array(4).keys()].map((index) => (
+            <div key={index} className={styles.inovoice_inner_flex}>
               <div
                 className={styles.invoice_inner_cards}
-                onClick={() => document.getElementById("getFile").click()}
+                onClick={() => document.getElementById(`getFile${index}`).click()}
               >
                 <label htmlFor="img">
                   <Image
@@ -629,122 +659,25 @@ const FormCommon = () => {
                   <input
                     type="file"
                     data-max-size="2048"
-                    id="getFile"
-                    accept=".pdf"
-                    name="Invoice_File"
-                    onChange={chooseFile}
-                    value={values.Invoice_File}
+                    id={`getFile${index}`}
+                    name={`Invoice_File${index}`}
+                    onChange={(e) => handleFileUpload(e, index)}
                   />
                 </label>
-                {uploadedInvoice && (
+                {values[`uploadedInvoice${index}`] && (
                   <p className={styles.uploadedInvoiceText}>
-                    Invoice 1 has been uploaded: {uploadedInvoice}
+                    Invoice {index + 1} has been uploaded: {values[`uploadedInvoice${index}`]}
                   </p>
                 )}
               </div>
               <div className={styles.invoice_flex_text_outer}>
                 <p className={styles.invoice_flex_text_inner}>
-                  Upload Invoice 1
+                  Upload Invoice {index + 1}
                 </p>
               </div>
             </div>
-
-            <div className={styles.inovoice_inner_flex}>
-              <div
-                className={styles.invoice_inner_cards}
-                onClick={() => document.getElementById("getFile1").click()}
-              >
-                <label htmlFor="img">
-                  <Image
-                    src={invoice_icon}
-                    alt="none"
-                    className={styles.invc_img}
-                  />
-                  <input
-                    type="file"
-                    data-max-size="2048"
-                    id="getFile1"
-                    name="Invoice_File1"
-                    onChange={chooseFile1}
-                  />
-                </label>
-                {uploadedInvoice1 && (
-                  <p className={styles.uploadedInvoiceText}>
-                    Invoice 2 has been uploaded: {uploadedInvoice1}
-                  </p>
-                )}
-              </div>
-              <div className={styles.invoice_flex_text_outer}>
-                <p className={styles.invoice_flex_text_inner}>
-                  Upload Invoice 2
-                </p>
-              </div>
-            </div>
-
-            <div className={styles.inovoice_inner_flex}>
-              <div
-                className={styles.invoice_inner_cards}
-                onClick={() => document.getElementById("getFile2").click()}
-              >
-                <label htmlFor="img">
-                  <Image
-                    src={invoice_icon}
-                    alt="none"
-                    className={styles.invc_img}
-                  />
-                  <input
-                    type="file"
-                    data-max-size="2048"
-                    id="getFile2"
-                    name="Invoice_File2"
-                    onChange={chooseFile2}
-                  />
-                </label>
-                {uploadedInvoice2 && (
-                  <p className={styles.uploadedInvoiceText}>
-                    Invoice 3 has been uploaded: {uploadedInvoice2}
-                  </p>
-                )}
-              </div>
-              <div className={styles.invoice_flex_text_outer}>
-                <p className={styles.invoice_flex_text_inner}>
-                  Upload Invoice 3
-                </p>
-              </div>
-            </div>
-
-            <div className={styles.inovoice_inner_flex}>
-              <div
-                className={styles.invoice_inner_cards}
-                onClick={() => document.getElementById("getFile3").click()}
-              >
-                <label htmlFor="img">
-                  <Image
-                    src={invoice_icon}
-                    alt="none"
-                    className={styles.invc_img}
-                  />
-                  <input
-                    type="file"
-                    data-max-size="2048"
-                    id="getFile3"
-                    name="Invoice_File3"
-                    onChange={chooseFile3}
-                  />
-                </label>
-                {uploadedInvoice3 && (
-                  <p className={styles.uploadedInvoiceText}>
-                    Invoice 4 has been uploaded: {uploadedInvoice3}
-                  </p>
-                )}
-              </div>
-              <div className={styles.invoice_flex_text_outer}>
-                <p className={styles.invoice_flex_text_inner}>
-                  Upload Invoice 4
-                </p>
-              </div>
-            </div>
-          </div>
+          ))}
+        </div>
           <div className={styles.form_last_section}>
             <div className={styles.form_last_section_content}>
               <div className={styles.check}>
