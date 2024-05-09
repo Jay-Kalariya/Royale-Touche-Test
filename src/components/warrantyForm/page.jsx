@@ -296,7 +296,7 @@ const FormCommon = () => {
       <form
         ref={form}
         onSubmit={(e) => {
-          handleSubmit(e);
+          handleSubmit(e);  
           if (submit) {
             showErrorToast();
           }
@@ -778,9 +778,10 @@ const FormCommon = () => {
             <button
               class="button-57"
               role="button"
-              onClick={() => {
-                handleSubmit();
-              }}
+              type="submit"
+              // onClick={() => {
+              //   handleSubmit();
+              // }}
             >
               <span class="text"> Submit</span>
               <span> Submit</span>

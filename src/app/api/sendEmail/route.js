@@ -3,7 +3,7 @@ import nodemailer from "nodemailer";
 
 export async function POST(request) {
   try {
-    const { fullName, email, Phone, Whatsapp, Address, Pincode } = await request.json();
+    const { fullName, email, Phone, Whatsapp, Address, Pincode,City, District,State,Dealer_Name,Category,Product_Name_0,Product_Name_1,Product_Name_2,Product_Name_3,sheets,sheets_0,sheets_1,sheets_2,No_of_thickness_0,No_of_thickness_1,No_of_thickness_2,No_of_thickness_3,Invoice_File,Invoice_File1,Invoice_File2,Invoice_File3} = await request.json();
 
     // Create Nodemailer transporter
     const transporter = nodemailer.createTransport({
@@ -28,10 +28,32 @@ export async function POST(request) {
             <li><strong>Name:</strong> ${fullName}</li><br /><br />
             <li><strong>Email:</strong> ${email}</li> <br /><br />
             <li><strong>Phone:</strong> ${Phone}</li> <br /><br />
-            <li><strong>Address:</strong> ${Whatsapp}</li><br /><br /> 
-            <li><strong>Description:</strong> ${Address}</li> <br />
-            <li><strong>Description:</strong> ${Pincode}</li> <br />
-          </ul>
+            <li><strong>Whatsapp:</strong> ${Whatsapp}</li><br /><br /> 
+            <li><strong>Address:</strong> ${Address}</li> <br />
+            <li><strong>Pincode:</strong> ${Pincode}</li> <br />
+            <li><strong>City:</strong> ${City}</li> <br />
+            <li><strong>District:</strong> ${District}</li> <br />
+            <li><strong>State:</strong> ${State}</li> <br />
+            <li><strong>Dealer_Name:</strong> ${Dealer_Name}</li> <br />
+            <li><strong>Category:</strong> ${Category}</li> <br />
+            <li><strong>Product_Name_0:</strong> ${Product_Name_0}</li> <br />
+            <li><strong>Product_Name_1:</strong> ${Product_Name_1}</li> <br />
+            <li><strong>Product_Name_2:</strong> ${Product_Name_2}</li> <br />
+            <li><strong>Product_Name_3:</strong> ${Product_Name_3}</li> <br />
+            <li><strong>sheets:</strong> ${sheets}</li> <br />
+            <li><strong>sheets_0:</strong> ${sheets_0}</li> <br />
+            <li><strong>sheets_1:</strong> ${sheets_1}</li> <br />
+            <li><strong>sheets_2:</strong> ${sheets_2}</li> <br />
+            <li><strong>No_of_thickness_0:</strong> ${No_of_thickness_0}</li> <br />
+            <li><strong>No_of_thickness_1:</strong> ${No_of_thickness_1}</li> <br />
+            <li><strong>No_of_thickness_2:</strong> ${No_of_thickness_2}</li> <br />
+            <li><strong>No_of_thickness_3:</strong> ${No_of_thickness_3}</li> <br />
+            <li><strong>Invoice_File:</strong> ${Invoice_File}</li> <br />
+            <li><strong>Invoice_File1:</strong> ${Invoice_File1}</li> <br />
+            <li><strong>Invoice_File2:</strong> ${Invoice_File2}</li> <br />
+            <li><strong>Invoice_File3:</strong> ${Invoice_File3}</li> <br />
+
+            </ul>
         </div>
       `,
     };
