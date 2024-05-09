@@ -1,0 +1,423 @@
+.timeline_outer {
+  background-color: white;
+  padding-bottom: 20rem;
+}
+
+.timeline_heading {
+  font-size: 60px;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  padding-top: 9rem;
+  color: rgb(0, 0, 0);
+  text-align: center;
+}
+
+.timeline_main_outer {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  font-weight: 400;
+  color: "white";
+}
+.timeline {
+  position: relative;
+  min-height: 150px;
+}
+.line {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  top: 63px;
+  bottom: -90px;
+  border-right: 2px solid #0f8a83;
+}
+.section {
+  display: flex;
+  position: relative;
+  justify-content: space-evenly;
+  z-index: 1;
+  margin-top: 7rem;
+  align-items: center;
+  min-height: 290px;
+}
+.bead_outer {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+}
+
+.timeline_comment {
+  font-size: 17px;
+  width: 250px;
+  /* margin-bottom: -13rem; */
+  position: absolute;
+  top: 83%;
+  left: 30%;
+  text-align: right;
+}
+.two {
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.content {
+  color: #000000;
+  position: absolute;
+  width: 40%;
+  top: 158px;
+  right: -11rem;
+  padding-bottom: 5rem;
+  opacity: 0;
+}
+
+.bead {
+  display: block;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
+  background-color: #0f8a83;
+  left: 49.1%;
+  z-index: 2;
+  top: 14%;
+}
+.timeline_year {
+  font-size: 65px;
+  color: #000000;
+  opacity: 0;
+  position: absolute;
+  top: 6.6rem;
+  left: 31rem;
+}
+
+@media (min-width: 1600px) and (max-width: 1920px) {
+  .timeline_year {
+    font-size: 87px;
+    color: #000000;
+    opacity: 0;
+    position: absolute;
+    top: 6.6rem;
+    left: 36rem;
+  }
+
+  .timeline_comment {
+    font-size: 18px;
+    width: 320px;
+    margin-bottom: 1rem;
+    position: absolute;
+    top: 95%;
+    left: 27%;
+    text-align: right;
+    opacity: 0;
+  }
+}
+@media (max-width: 1440px) {
+  .timeline_year {
+    font-size: 65px;
+    color: #000000;
+    opacity: 0;
+    position: absolute;
+    top: 6.6rem;
+    left: 26rem;
+  }
+
+  .content {
+    color: #000000;
+    position: absolute;
+    width: 43%;
+    top: 158px;
+    right: -11rem;
+    padding-bottom: 5rem;
+    opacity: 0;
+  }
+
+  .timeline_comment {
+    font-size: 20px;
+    width: 280px;
+    /* margin-bottom: -13rem; */
+    position: absolute;
+    top: 83%;
+    left: 24%;
+    text-align: right;
+    opacity: 0;
+  }
+  .content {
+    right: -12rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .content {
+    right: -9rem;
+  }
+}
+
+
+
+@media (max-width: 1199px) {
+  .timeline_year {
+    font-size: 57px;
+    color: #000000;
+    opacity: 0;
+    position: absolute;
+    top: 6.7rem;
+    left: 27%;
+  }
+
+  .timeline_comment {
+    font-size: 17px;
+    width: 250px;
+    /* margin-bottom: -13rem; */
+    position: absolute;
+    top: 75%;
+    left: 19%;
+    opacity: 0;
+  }
+}
+
+@media (max-width: 991px) {
+  .line {
+    position: absolute;
+    z-index: 1;
+    left: 12%;
+    transform: translateX(-50%);
+    width: 2px;
+    top: 135px;
+    bottom: -200px;
+    border-right: 2px solid #0f8a83;
+  }
+
+  .timeline_image {
+    height: 100%;
+  }
+  .bead_outer {
+    left: 11.2%;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+  }
+
+  .content {
+    color: #000000;
+    position: absolute;
+    width: 68%;
+    top: 210px;
+    /* right: 45px; */
+    padding-bottom: 0;
+    padding-top: 5rem;
+    opacity: 0;
+  }
+
+  .timeline_comment {
+    font-size: 15px;
+    width: 500px;
+    margin-bottom: 0.5rem;
+    top: 70%;
+    left: 28%;
+    text-align: left;
+  }
+
+  .timeline_heading {
+    font-size: 45px;
+    margin-bottom: 0rem;
+    font-weight: 400;
+    padding-top: 3rem;
+    color: rgb(0, 0, 0);
+    text-align: center;
+  }
+
+  .timeline_year {
+    font-size: 40px;
+    color: #000000;
+    opacity: 0;
+    position: absolute;
+    top: 8rem;
+    left: 13rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .line {
+    position: absolute;
+    z-index: 1;
+    left: 12%;
+    transform: translateX(-50%);
+    width: 2px;
+    top: 63px;
+    bottom: -168px;
+    border-right: 2px solid #0f8a83;
+  }
+
+  .timeline_image {
+    height: 100%;
+    width: 55%;
+  }
+  .bead_outer {
+    left: 11%;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+  }
+
+  .content {
+    color: #000000;
+    position: absolute;
+    width: 54%;
+    top: 82%;
+    right: 10px;
+    padding-bottom: 0;
+    padding-top: 3rem;
+    opacity: 0;
+  }
+
+  .timeline_comment {
+    font-size: 15px;
+    width: 400px;
+    margin-bottom: 1rem;
+    top: 64%;
+    left: 28%;
+  }
+
+  .timeline_heading {
+    font-size: 45px;
+    margin-bottom: 0rem;
+    font-weight: 400;
+    padding-top: 3rem;
+    color: rgb(0, 0, 0);
+    text-align: center;
+  }
+
+  .timeline_year {
+    font-size: 30px;
+    color: #000000;
+    opacity: 0;
+    position: absolute;
+    top: 5rem;
+    left: 12rem;
+  }
+  .section {
+    display: flex;
+    position: relative;
+    justify-content: space-evenly;
+    z-index: 1;
+    margin-top: 0;
+    align-items: center;
+    min-height: 220px;
+    margin-bottom: 155px;
+  }
+}
+
+@media (max-width: 575px) {
+  .line {
+    position: absolute;
+    z-index: 1;
+    left: 12%;
+    transform: translateX(-50%);
+    width: 2px;
+    top: 63px;
+    bottom: -168px;
+    border-right: 2px solid #0f8a83;
+  }
+
+  .timeline_comment {
+    font-size: 14px;
+    width: 400px;
+    margin-bottom: 1rem;
+    top: 67%;
+    left: 28%;
+  }
+
+  .timeline_image {
+    height: 100%;
+    width: 65%;
+  }
+  .bead_outer {
+    left: 10.5%;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+  }
+
+  .content {
+    color: #000000;
+    position: absolute;
+    top: 80%;
+    right: 10px;
+    padding-bottom: 0;
+    padding-top: 3.5rem;
+    opacity: 0;
+  }
+
+  .timeline_comment {
+    font-size: 15px;
+    width: 300px;
+    width: 60%;
+    margin-bottom: 1rem;
+    
+  }
+
+  .timeline_heading {
+    font-size: 45px;
+    margin-bottom: 0rem;
+    font-weight: 400;
+    padding-top: 3rem;
+    color: rgb(0, 0, 0);
+    text-align: center;
+  }
+
+  .timeline_year {
+    font-size: 30px;
+    color: #000000;
+    opacity: 0;
+    position: absolute;
+    top: 5rem;
+    left: 28%;
+  }
+  .section:last-child .content{
+    top: 105%;
+  }
+  .section:nth-child(5) .content{
+    top: 86%;
+  }
+  .section:nth-child(6) .content{
+    top: 90%;
+  }
+  .section:nth-child(10) .content{
+    top: 90%;
+  }
+}
+@media (max-width: 420px) {
+  /* .timeline_comment {
+    font-size: 15px;
+    width: 220px;
+    margin-bottom: 1rem;
+  }
+  .timeline_year {
+    font-size: 30px;
+    color: #000000;
+    opacity: 0;
+    position: absolute;
+    top: 8rem;
+    left: 30%;
+  } */
+}
+
+
+@media (max-width: 320px) {
+  .timeline_comment {
+    font-size: 15px;
+    width: 208px;
+    margin-bottom: 1rem;
+  }
+
+
+  .bead_outer {
+    left: 10%;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+  }
+
+}

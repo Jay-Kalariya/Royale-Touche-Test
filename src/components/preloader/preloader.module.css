@@ -1,0 +1,201 @@
+.introduction {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 99;
+  background-color: #006861;
+}
+
+.introduction svg {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: calc(100% + 300px);
+}
+
+.introduction svg path {
+  fill: #006f69;
+}
+
+.introduction p {
+  display: flex;
+  color: white;
+  font-size: 120px;
+  align-items: center;
+  position: absolute;
+  z-index: 1;
+}
+
+.introduction p span {
+  display: block;
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.counterContainer {
+  position: relative;
+}
+
+.preloader_text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* right: -4rem; */
+  /* bottom: 0rem; */
+}
+
+.percentageCounter {
+  font-size: 5em;
+  position: absolute;
+  font-size: 100px;
+  font-weight: 300;
+  right: -33rem;
+  bottom: -20rem;
+  color: #fff;
+}
+.loading {
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  padding-right: 20px;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.loading img {
+  max-width: 100%;
+  width: 60px;
+  height: 70px;
+  padding-top: 10px;
+}
+
+
+@media (min-width: 1921px) and (max-width: 2560px) {
+  .percentageCounter {
+    font-size: 5em;
+    right: -60rem;
+    bottom: -25rem;
+  }
+}
+
+@media (min-width: 1701px) and (max-width: 1920px) {
+  .percentageCounter {
+    font-size: 5em;
+    right: -50rem;
+    bottom: -22rem;
+  }
+}
+
+
+@media (min-width: 1600px) and (max-width: 1700px) {
+  .percentageCounter {
+    font-size: 5em;
+    right: -40rem;
+    bottom: -19rem;
+  }
+}
+
+
+@media (max-width: 1440px) {
+  .percentageCounter {
+    font-size: 5em;
+    position: absolute;
+    font-size: 100px;
+    font-weight: 300;
+    right: -33rem;
+    bottom: -22rem;
+    color: #fff;
+  }
+}
+
+
+@media (max-width: 1024px) {
+  .preloader_text {
+    position: absolute;
+    right: -8rem;
+    bottom: 13rem;
+  }
+  .percentageCounter {
+    font-size: 5em;
+    right: -20rem;
+    bottom: -25rem;
+  }
+}
+
+@media (max-width: 991px) {
+  .percentageCounter {
+    font-size: 5em;
+    right: -18rem;
+    bottom: -35rem;
+  }
+
+  .preloader_text {
+    position: absolute;
+    right: -3rem;
+    bottom: 5rem;
+  }
+}
+
+@media (max-width: 820px) {
+ 
+  .preloader_text {
+    right: -8rem;
+    bottom: -4rem;
+  }
+  .percentageCounter {
+    font-size: 5em;
+    right: -14rem;
+    bottom: -25rem;
+  }
+}
+
+@media (max-width: 787px) {
+  .percentageCounter {
+    font-size: 5em;
+    right: 0rem;
+    bottom: -20rem;
+  }
+
+  .preloader_text {
+    right: -5rem;
+    bottom: 5rem;
+  }
+
+  .introduction p {
+    font-size: 70px;
+  }
+}
+
+
+@media (max-width: 575px) {
+
+  .introduction{
+    height: 100lvh;
+  }
+  .percentageCounter {
+    font-size: 5em;
+    right: 0rem;
+    bottom: -20rem;
+  }
+
+  .preloader_text {
+    right: -5rem;
+    bottom: 5rem;
+  }
+
+  .introduction p {
+    font-size: 70px;
+  }
+}

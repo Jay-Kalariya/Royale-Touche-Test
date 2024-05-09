@@ -1,0 +1,94 @@
+.descriptions {
+      top: 2px;
+      height: 100%;
+      cursor: pointer;
+      position: absolute;
+      width: 100%;
+      z-index: 20;
+      pointer-events: none;
+    }
+    
+    .descriptions .description {
+      background-color: #328680;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      padding-left: 5%;
+      padding-right: 0%;
+      clip-path: inset(50% 0 50%);
+      transition: clip-path 0.4s;
+    }
+    
+    .descriptions .description p:nth-of-type(1) {
+      color: #ffffff;
+      font-weight: 300;
+      cursor: pointer;
+      font-size: 2vw;
+      line-height: 7vw;
+      margin: 0px;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .descriptions .description p:nth-of-type(2) {
+      width: 40%;
+      font-size: 1vw;
+      font-weight: 700;
+    }
+    
+
+
+
+    @media(max-width:991px){
+
+      .descriptions {
+        top: 0px;
+        height: 100%;
+        position: absolute;
+        width: 100%;
+        z-index: 20;
+        pointer-events: none;
+      }
+      .descriptions .description p:nth-of-type(1) {
+        color: #ffffff;
+        font-weight: 400;
+        cursor: pointer;
+        font-size: 5vw;
+        line-height: 14.2vw;
+        margin: 0px;
+        position: relative;
+        z-index: 1;
+      }
+      
+
+    }
+
+
+
+
+
+
+    @media(max-width:787px){
+
+      .descriptions {
+        top: 0px;
+        height: 100%;
+        position: absolute;
+        width: 100%;
+        z-index: 20;
+        pointer-events: none;
+      }
+      .descriptions .description p:nth-of-type(1) {
+        color: #ffffff;
+        font-weight: 400;
+        cursor: pointer;
+        font-size: 5vw;
+        line-height: 14.4vw;
+        margin: 0px;
+        position: relative;
+        z-index: 1;
+      }
+      
+
+    }

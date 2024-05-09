@@ -1,0 +1,81 @@
+.contactAddress {
+  padding: 42px 0 0;
+  margin: 0 133px 42px;
+}
+
+.contactAddress_wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.contactAddressItem {
+  width: 295px;
+  padding: 0 20px;
+}
+.contactAddressItem:first-child {
+  width: 345px;
+}
+.heading {
+  color: #fff;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130.092%;
+  margin: 0 0 20px;
+}
+.address {
+  color: #fff;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130.092%;
+}
+.number a {
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.4s;
+  font-size: 20px;
+}
+@media (max-width: 1340px) {
+  .contactAddress {
+    margin: 0 100px 42px;
+  }
+}
+@media (max-width: 1199px) {
+  .contactAddress {
+    margin: 0 60px 96px;
+  }
+  .address {
+    font-size: 18px;
+  }
+  .number a {
+    font-size: 18px;
+  }
+}
+@media (max-width: 991px) {
+  .contactAddress {
+    margin: 0 25px 50px;
+  }
+  .contactAddressItem {
+    width: 241px;
+    padding: 0 10px;
+  }
+}
+@media (max-width: 767px) {
+  .contactAddress_wrapper {
+    flex-wrap: wrap;
+  }
+  .contactAddressItem {
+    margin: 0 0 40px;
+    width: 50%;
+  }
+}
+@media (max-width: 575px) {
+  .contactAddress {
+    margin: 0 20px 20px;
+  }
+  .contactAddressItem {
+    margin: 0 0 40px;
+    width: 100%;
+    padding: 0;
+  }
+}

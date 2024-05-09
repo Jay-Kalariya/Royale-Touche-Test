@@ -1,0 +1,803 @@
+.button1 {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  border-radius: 30px;
+  line-height: 15px;
+  padding: 13px 27px 15px;
+  font-family: "LatoRegular";
+  font-size: 20px;
+  border: 2px solid #c3a464;
+  color: #c3a464;
+  text-decoration: none;
+  cursor: pointer;
+  z-index: 20;
+  background: transparent;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button1 span:first-child {
+  position: relative;
+  transition: color 600ms cubic-bezier(0.48, 0, 0.12, 1);
+  z-index: 10;
+}
+
+.button1 span:last-child {
+  color: white;
+  display: block;
+  position: absolute;
+  width: 100%;
+  font-family: "LatoRegular";
+  bottom: 0;
+  transition: all 500ms cubic-bezier(0.48, 0, 0.12, 1);
+  z-index: 100;
+  opacity: 0;
+  top: 70%;
+  left: 50%;
+  transform: translateY(225%) translateX(-50%);
+  height: 14px;
+  line-height: 13px;
+}
+
+.button1:after {
+  content: "";
+  position: absolute;
+  bottom: -50%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-family: "LatoRegular";
+  background-color: #006f69;
+  border: 1px solid #006f69;
+  transform-origin: bottom center;
+  transition: transform 600ms cubic-bezier(0.48, 0, 0.12, 1);
+  transform: skewY(9.3deg) scaleY(0);
+  z-index: 50;
+}
+
+.button1:hover {
+  border: 2px solid #006f69;
+}
+.button1:hover:after {
+  transform-origin: bottom center;
+  border: 1px solid #006f69;
+  transform: skewY(9.3deg) scaleY(2);
+}
+
+.button1:hover span:last-child {
+  transform: translateX(-50%) translateY(-110%);
+  opacity: 1;
+  font-family: "LatoRegular";
+  transition: all 900ms cubic-bezier(0.48, 0, 0.12, 1);
+}
+
+/*  */
+
+/* CSS */
+.button2 {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  border-radius: 30px;
+  font-family: "LatoRegular";
+  line-height: 15px;
+  width: 100%;
+  padding: 13px 10px 15px;
+  font-size: 15px;
+  border: 1px solid #c3a464;
+  color: #c3a464;
+  text-decoration: none;
+  cursor: pointer;
+  z-index: 16;
+  background: transparent;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button2 span:first-child {
+  position: relative;
+  transition: color 600ms cubic-bezier(0.48, 0, 0.12, 1);
+  z-index: 10;
+}
+
+.button2 span:last-child {
+  color: #006f69;
+  display: block;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  transition: all 500ms cubic-bezier(0.48, 0, 0.12, 1);
+  z-index: 100;
+  opacity: 0;
+  top: 70%;
+  left: 50%;
+  transform: translateY(225%) translateX(-50%);
+  height: 14px;
+  line-height: 13px;
+}
+
+.button2:after {
+  content: "";
+  position: absolute;
+  bottom: -50%;
+  font-family: "LatoRegular";
+  left: -1px;
+  width: 100%;
+  color: #006f69;
+  height: 100%;
+  background-color: #ffffff;
+  border: 1px solid #006f69;
+  transform-origin: bottom center;
+  transition: transform 600ms cubic-bezier(0.48, 0, 0.12, 1);
+  transform: skewY(9.3deg) scaleY(0);
+  z-index: 50;
+}
+
+.button2:hover {
+  border: 1px solid #006f69;
+}
+.button2:hover:after {
+  transform-origin: bottom center;
+  border: 1px solid #006f69;
+  transform: skewY(9.3deg) scaleY(2);
+}
+
+.button2:hover span:last-child {
+  transform: translateX(-50%) translateY(-110%);
+  opacity: 1;
+  font-family: "LatoRegular";
+  transition: all 900ms cubic-bezier(0.48, 0, 0.12, 1);
+}
+
+/* 3 */
+
+.button3 {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  border-radius: 30px;
+  font-family: "LatoRegular";
+  line-height: 15px;
+  padding: 15px 30px 15px 30px;
+  font-size: 20px;
+
+  border: 1px solid #c3a464;
+  color: #c3a464;
+  text-decoration: none;
+  cursor: pointer;
+  z-index: 0;
+  background: transparent;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button3 span:first-child {
+  position: relative;
+  transition: color 600ms cubic-bezier(0.48, 0, 0.12, 1);
+  z-index: 10;
+}
+
+.button3 span:last-child {
+  color: white;
+  display: block;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  transition: all 500ms cubic-bezier(0.48, 0, 0.12, 1);
+  z-index: 100;
+  opacity: 0;
+  top: 70%;
+  font-family: "LatoRegular";
+  left: 50%;
+  transform: translateY(225%) translateX(-50%);
+  height: 14px;
+  line-height: 13px;
+}
+
+.button3:after {
+  content: "";
+  position: absolute;
+  bottom: -50%;
+  left: 0;
+  font-family: "LatoRegular";
+  width: 100%;
+  height: 100%;
+  background-color: #006f69;
+  border: 1px solid #006f69;
+  transform-origin: bottom center;
+  transition: transform 600ms cubic-bezier(0.48, 0, 0.12, 1);
+  transform: skewY(9.3deg) scaleY(0);
+  z-index: 50;
+}
+
+.button3:hover {
+  border: 1px solid #006f69;
+}
+.button3:hover:after {
+  transform-origin: bottom center;
+  border: 1px solid #006f69;
+  transform: skewY(9.3deg) scaleY(2);
+}
+
+.button3:hover span:last-child {
+  font-family: "LatoRegular";
+  transform: translateX(-50%) translateY(-110%);
+  opacity: 1;
+  transition: all 900ms cubic-bezier(0.48, 0, 0.12, 1);
+}
+
+/* 4 */
+
+.button4 {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  border-radius: 30px;
+  /* font-family: '__Lato_712376'; */
+  font-family: "LatoRegular";
+  line-height: 15px;
+  padding: 20px 38px 18px;
+  font-size: 20px;
+
+  border: 1px solid #c3a464;
+  color: #c3a464;
+  text-decoration: none;
+  cursor: pointer;
+  z-index: 16;
+  background: transparent;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button4 span:first-child {
+  position: relative;
+  font-family: "LatoRegular";
+  transition: color 600ms cubic-bezier(0.48, 0, 0.12, 1);
+  z-index: 10;
+}
+
+.button4 span:last-child {
+  color: #006f69;
+  display: block;
+  font-family: "LatoRegular";
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  transition: all 500ms cubic-bezier(0.48, 0, 0.12, 1);
+  z-index: 100;
+  opacity: 0;
+  top: 70%;
+  left: 50%;
+  transform: translateY(225%) translateX(-50%);
+  height: 14px;
+  line-height: 13px;
+}
+
+.button4:after {
+  content: "";
+  position: absolute;
+  bottom: -50%;
+  left: 0;
+  width: 100%;
+  color: #006f69;
+  font-family: "LatoRegular";
+  /* font-family: '__Lato_712376'; */
+  height: 100%;
+  background-color: white;
+  border: 1px solid #006f69;
+  transform-origin: bottom center;
+  transition: transform 600ms cubic-bezier(0.48, 0, 0.12, 1);
+  transform: skewY(9.3deg) scaleY(0);
+  z-index: 50;
+}
+
+.button4:hover {
+  border: 1px solid #006f69;
+}
+.button4:hover:after {
+  transform-origin: bottom center;
+  border: 1px solid #006f69;
+  font-family: "LatoRegular";
+  transform: skewY(9.3deg) scaleY(2);
+}
+
+.button4:hover span:last-child {
+  transform: translateX(-50%) translateY(-110%);
+  opacity: 1;
+  font-family: "LatoRegular";
+  /* font-family: '__Lato_712376'; */
+  transition: all 900ms cubic-bezier(0.48, 0, 0.12, 1);
+}
+
+/*  */
+
+.button5 {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  border-radius: 30px;
+  line-height: 15px;
+  padding: 15px 30px 15px 30px;
+  font-size: 20px;
+  font-family: "LatoRegular";
+  border: 1px solid #c3a464;
+  color: #c3a464;
+  text-decoration: none;
+  cursor: pointer;
+  z-index: 16;
+  background: transparent;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button5 span:first-child {
+  position: relative;
+  transition: color 600ms cubic-bezier(0.48, 0, 0.12, 1);
+  z-index: 10;
+}
+
+.button5 span:last-child {
+  color: white;
+  display: block;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  font-family: "LatoRegular";
+  transition: all 500ms cubic-bezier(0.48, 0, 0.12, 1);
+  z-index: 100;
+  opacity: 0;
+  top: 70%;
+  left: 50%;
+  transform: translateY(225%) translateX(-50%);
+  height: 14px;
+  line-height: 13px;
+}
+
+.button5:after {
+  content: "";
+  position: absolute;
+  bottom: -50%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-family: "LatoRegular";
+  background-color: #006f69;
+  border: 1px solid #006f69;
+  transform-origin: bottom center;
+  transition: transform 600ms cubic-bezier(0.48, 0, 0.12, 1);
+  transform: skewY(9.3deg) scaleY(0);
+  z-index: 50;
+}
+
+.button5:hover {
+  border: 1px solid #006f69;
+}
+.button5:hover:after {
+  transform-origin: bottom center;
+  border: 1px solid #006f69;
+  transform: skewY(9.3deg) scaleY(2);
+}
+
+.button5:hover span:last-child {
+  transform: translateX(-50%) translateY(-110%);
+  font-family: "LatoRegular";
+  opacity: 1;
+  transition: all 900ms cubic-bezier(0.48, 0, 0.12, 1);
+}
+
+/* button 6 */
+
+.button6 {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  border-radius: 30px;
+  font-family: "LatoRegular";
+  line-height: 15px;
+  padding: 20px 47px 18px;
+  font-size: 20px;
+  border: 1px solid #c3a464;
+  color: #c3a464;
+  text-decoration: none;
+  cursor: pointer;
+  z-index: 16;
+  background: transparent;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button6 span:first-child {
+  position: relative;
+  transition: color 600ms cubic-bezier(0.48, 0, 0.12, 1);
+  z-index: 10;
+}
+
+.button6 span:last-child {
+  color: #ffffff;
+  display: block;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  transition: all 500ms cubic-bezier(0.48, 0, 0.12, 1);
+  z-index: 100;
+  opacity: 0;
+  top: 70%;
+  left: 50%;
+  font-family: "LatoRegular";
+  transform: translateY(225%) translateX(-50%);
+  height: 14px;
+  line-height: 13px;
+}
+
+.button6:after {
+  content: "";
+  position: absolute;
+  bottom: -50%;
+  left: 0;
+  width: 100%;
+  font-family: "LatoRegular";
+  color: #006f69;
+  height: 100%;
+  background-color: #006f69;
+  border: 1px solid #006f69;
+  transform-origin: bottom center;
+  transition: transform 600ms cubic-bezier(0.48, 0, 0.12, 1);
+  transform: skewY(9.3deg) scaleY(0);
+  z-index: 50;
+}
+
+.button6:hover {
+  border: 1px solid #006f69;
+}
+.button6:hover:after {
+  transform-origin: bottom center;
+  border: 1px solid #006f69;
+  transform: skewY(9.3deg) scaleY(2);
+}
+
+.button6:hover span:last-child {
+  transform: translateX(-50%) translateY(-110%);
+  opacity: 1;
+  font-family: lato;
+  transition: all 900ms cubic-bezier(0.48, 0, 0.12, 1);
+}
+
+/* button 7 */
+
+.button7 {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  border-radius: 30px;
+  font-family: "LatoRegular";
+  line-height: 15px;
+  padding: 17px 108px 15px;
+  font-size: 20px;
+  margin: 2rem 38rem;
+  border: 1px solid #c3a464;
+  color: #c3a464;
+  text-decoration: none;
+  cursor: pointer;
+  z-index: 16;
+  background: transparent;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button7 span:first-child {
+  position: relative;
+  transition: color 600ms cubic-bezier(0.48, 0, 0.12, 1);
+  z-index: 10;
+}
+
+.button7 span:last-child {
+  color: #000000;
+  display: block;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  transition: all 500ms cubic-bezier(0.48, 0, 0.12, 1);
+  z-index: 100;
+  opacity: 0;
+  font-family: "LatoRegular";
+  top: 70%;
+  left: 50%;
+  transform: translateY(225%) translateX(-50%);
+  height: 14px;
+  line-height: 13px;
+}
+
+.button7:after {
+  content: "";
+  position: absolute;
+  bottom: -50%;
+  left: 0;
+  width: 100%;
+  font-family: "LatoRegular";
+  color: #000000;
+  height: 100%;
+  background-color: #ffffff;
+  border: 1px solid #ffffff;
+  transform-origin: bottom center;
+  transition: transform 600ms cubic-bezier(0.48, 0, 0.12, 1);
+  transform: skewY(9deg) scaleY(0);
+  z-index: 50;
+}
+
+.button7:hover {
+  border: 1px solid #ffffff;
+}
+.button7:hover:after {
+  transform-origin: bottom center;
+  border: 1px solid #006f69;
+  transform: skewY(4.3deg) scaleY(2);
+}
+
+.button7:hover span:last-child {
+  transform: translateX(-50%) translateY(-110%);
+  opacity: 1;
+  font-family: "LatoRegular";
+  transition: all 900ms cubic-bezier(0.48, 0, 0.12, 1);
+}
+
+/* CSS */
+.button8 {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  font-family: "LatoRegular";
+  line-height: 15px;
+  padding: 20px 47px 18px;
+  font-size: 20px;
+  border: 1px solid #c3a464;
+  color: #c3a464;
+  text-decoration: none;
+  cursor: pointer;
+  z-index: 16;
+  background: transparent;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button8 span:first-child {
+  position: relative;
+  transition: color 600ms cubic-bezier(0.48, 0, 0.12, 1);
+  z-index: 10;
+  font-family: "LatoRegular";
+}
+
+.button8 span:last-child {
+  color: #ffffff;
+  display: block;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  font-family: "LatoRegular";
+  transition: all 500ms cubic-bezier(0.48, 0, 0.12, 1);
+  z-index: 100;
+  opacity: 0;
+  top: 70%;
+  left: 50%;
+  transform: translateY(225%) translateX(-50%);
+  height: 14px;
+  line-height: 13px;
+}
+
+.button8:after {
+  content: "";
+  position: absolute;
+  bottom: -50%;
+  font-family: "LatoRegular";
+  left: 0;
+  width: 100%;
+  color: #006f69;
+  height: 100%;
+  background-color: #006f69;
+  border: 1px solid #006f69;
+  transform-origin: bottom center;
+  transition: transform 600ms cubic-bezier(0.48, 0, 0.12, 1);
+  transform: skewY(9.3deg) scaleY(0);
+  z-index: 50;
+}
+
+.button8:hover {
+  border: 1px solid #006f69;
+}
+.button8:hover:after {
+  transform-origin: bottom center;
+  border: 1px solid #006f69;
+  transform: skewY(9.3deg) scaleY(2);
+}
+
+.button8:hover span:last-child {
+  transform: translateX(-50%) translateY(-110%);
+  opacity: 1;
+  font-family: "LatoRegular";
+  transition: all 900ms cubic-bezier(0.48, 0, 0.12, 1);
+}
+
+/* button 9 */
+
+
+.button9 {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  font-family: "LatoRegular";
+  line-height: 15px;
+  padding: 20px 47px 18px;
+  font-size: 20px;
+margin-top: 1.5rem;
+  border: 1px solid #006f69;
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+  z-index: 16;
+  background-color: #006f69;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button9 span:first-child {
+  position: relative;
+  transition: color 600ms cubic-bezier(0.48, 0, 0.12, 1);
+  z-index: 10;
+}
+
+.button9 span:last-child {
+  color: #006f69;
+  display: block;
+  position: absolute;
+  width: 100%;
+  font-family: "LatoRegular";
+  bottom: 0;
+  transition: all 500ms cubic-bezier(0.48, 0, 0.12, 1);
+  z-index: 100;
+  opacity: 0;
+  top: 70%;
+  left: 50%;
+  transform: translateY(225%) translateX(-50%);
+  height: 14px;
+  line-height: 13px;
+}
+
+.button9:after {
+  content: "";
+  position: absolute;
+  bottom: -50%;
+  font-family: "LatoRegular";
+  left: 0;
+  width: 100%;
+  color: #000000;
+  height: 100%;
+  background-color: #ffffff;
+  border: none;
+  transform-origin: bottom center;
+  transition: transform 600ms cubic-bezier(0.48, 0, 0.12, 1);
+  transform: skewY(9.3deg) scaleY(0);
+  z-index: 50;
+}
+
+.button9:hover {
+  border: 1px solid #006f69;
+}
+.button9:hover:after {
+  transform-origin: bottom center;
+  border: 1px solid #006f69;
+  transform: skewY(9.3deg) scaleY(2);
+}
+
+.button9:hover span:last-child {
+  transform: translateX(-50%) translateY(-110%);
+  opacity: 1;
+  font-family: "LatoRegular";
+  transition: all 900ms cubic-bezier(0.48, 0, 0.12, 1);
+}
+
+
+
+
+
+@media (min-width: 1600px) {
+  .button7 {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    border-radius: 30px;
+    font-family: "LatoRegular";
+    line-height: 15px;
+    padding: 17px 135px 15px;
+    font-size: 20px;
+    margin: 2rem 47rem;
+    border: 1px solid #c3a464;
+    color: #c3a464;
+    text-decoration: none;
+    cursor: pointer;
+    z-index: 16;
+    background: transparent;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+}
+
+
+@media (max-width: 1199px) {
+  .button2 {
+    position: relative;
+    font-family: "LatoRegular";
+    font-size: 13px;
+    border: 1px solid #c3a464;
+  }
+}
+
+
+@media (max-width:1024px){
+  .button7 {
+    padding: 17px 63px 13px;
+    margin: 2rem 23rem;
+  }
+  .button2{
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 991px) {
+  .button1 {
+    padding: 10px 17px 10px;
+  }
+  .button4 {
+    padding: 17px 24px 17px;
+  }
+
+  .button7 {
+    padding: 17px 63px 13px;
+    margin: 2rem 23rem;
+  }
+}
+
+@media (max-width: 787px) {
+  .button1 {
+    padding: 10px 17px 10px;
+  }
+  .button4 {
+    padding: 17px 24px 17px;
+  }
+
+  .button7 {
+    padding: 17px 80px 13px;
+    margin: 2rem 15rem;
+  }
+
+  .button8 {
+    padding: 15px 13px 15px;
+  }
+}
+
+@media (max-width: 425px) {
+  .button7 {
+    padding: 11px 33px 13px;
+    margin: 1.5rem 8rem;
+  }
+  .button8 {
+    padding: 15px 13px 15px;
+  }
+}
+
+@media (max-width: 320px) {
+  .button7 {
+    padding: 9px 20px 11px;
+    margin: 1rem 6rem;
+    font-size: 17px;
+  }
+}

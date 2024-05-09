@@ -1,0 +1,23 @@
+.swiper-slide {
+      flex-shrink: 0;
+      width: 100%;
+      height: auto !important;
+      position: relative;
+      transition-property: transform;
+      display: block;
+    }
+    .swiper-button-prev
+    {
+      color: #006861 !important;
+    }
+    .swiper-button-next
+    {
+      color: #006861 !important;
+    }
+    .swiper-wrapper{
+      z-index: 0 !important;
+    }
+
+    .swiper {
+      z-index:0 !important;
+    }

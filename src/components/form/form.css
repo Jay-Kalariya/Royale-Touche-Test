@@ -1,0 +1,60 @@
+.css-13cymwt-control {
+  border: none !important;
+  border-color: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+  background-color: transparent !important;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+.css-13cymwt-control:hover {
+  outline: none !important;
+}
+.css-qbdosj-Input:focus-visible {
+  outline: none !important;
+}
+.css-b62m3t-container {
+  border-bottom: 1px solid #d1d1d1;
+}
+
+.css-t3ipsp-control {
+  border: none !important;
+  border-color: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+  background-color: transparent !important;
+}
+.css-t3ipsp-control:hover {
+  border: none !important;
+  border-color: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+.css-1fdsijx-ValueContainer{
+  padding: 0px !important;
+}
+
+.css-13cymwt-control {
+  border-radius: 0% !important;
+}
+.css-1dimb5e-singleValue {
+  color: #1e1e1e !important;
+  font-size: 17px !important;
+}
+
+.css-qbdosj-Input {
+  border: none !important;
+  outline: none !important;
+  z-index: -1 !important;
+}
+.css-b62m3t-container:focus-visible {
+  outline: none !important;
+}

@@ -1,0 +1,129 @@
+/* .accordion__button:hover {
+  background: #006f69;
+} */
+.accordian_header_main {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  text-align: center;
+}
+
+.accordion__item {
+  margin-top: 10px;
+}
+.accordion {
+  border: none !important;
+}
+.accordian_header_main_text {
+  color: white;
+  text-align: center;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: uppercase;
+}
+.accordion__button {
+  background: #006f69 !important;
+  color: white !important;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  cursor: default !important;
+  text-transform: math-auto !important;
+}
+
+.accordion__button::before {
+  float: right;
+  display: none !important;
+}
+
+.accordion__button:before {
+  color: white;
+  margin-top: 5px;
+}
+.main_Accordian_header {
+  padding-left: 10rem;
+  background-color: #006861;
+  padding-right: 10rem;
+  padding-bottom: 3rem;
+}
+.accordion__panel {
+  color: white;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  text-transform: math-auto !important;
+  background-color: #06625b;
+}
+.main_Accordian_header button {
+  background-color: #c3a464;
+}
+.viewmore {
+  text-align: center;
+  width: max-content;
+  margin: 0 auto;
+}
+.viewmore span {
+  text-transform: uppercase;
+}
+@media (max-width: 1024px) {
+  .main_Accordian_header {
+    padding-left: 4rem;
+    padding-right: 4rem;
+    padding-bottom: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .main_Accordian_header {
+    padding-left: 1.8rem;
+    padding-right: 1.8rem;
+    padding-bottom: 3rem;
+  }
+
+  .accordion__button {
+    font-size: 17px;
+    font-weight: 500;
+  }
+
+  .accordian_header_main_text {
+    text-align: center;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+  }
+
+  .accordian_header_main {
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 425px) {
+  .accordion__button {
+    font-size: 15px;
+    font-weight: 500;
+  }
+
+  .main_accordian_header_text {
+    font-size: 15px;
+  }
+  .main_Accordian_header button {
+    font-size: 18px;
+    padding: 12px 30px;
+  }
+}
+
+@media (max-width: 320px) {
+  .accordian_header_main_text {
+    text-align: center;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 500;
+  }
+
+  .main_accordian_header_text {
+    font-size: 15px;
+  }
+}

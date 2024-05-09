@@ -1,0 +1,25 @@
+.privacyPolicySection {
+  color: black;
+  padding: 4rem;
+}
+
+.title {
+  margin: 3rem 0 0 0;
+}
+
+.description {
+  line-height: 1.625;
+  margin: 1.5rem 0;
+}
+
+@media (max-width: 768px) {
+  .privacyPolicySection {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .privacyPolicySection {
+    padding: 1rem;
+  }
+}

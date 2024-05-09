@@ -1,0 +1,88 @@
+.titles {
+      width: 100%;
+      border-top: 1px solid #3286803d;
+    }
+    
+    .titles .title {
+      border-bottom: 1px solid #3286803d;
+      cursor: default;
+      position: relative;
+      z-index: 2;
+    }
+    
+    .titles .title .wrapper {
+      /* display: inline-block; */
+      cursor: pointer;
+      padding-left: 5%;
+    }
+    
+    .titles .title .wrapper p {
+      display: inline-block;
+      color: #ffffff;
+      font-weight: 300;
+      cursor: pointer;
+      font-size: 2vw;
+      line-height: 6.99vw;
+      margin: 0px;    
+      position: relative;
+      z-index: 2;
+    }
+    
+    .titles .title .wrapper p:nth-of-type(2) {
+      display: block;
+      position: absolute;
+      color: #ffffff;
+      top: 0;
+      z-index: 1;
+    }
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+    
+    @media(max-width:991px){
+      .titles .title .wrapper p {
+        display: inline-block;
+        color: #ffffff;
+        font-weight: 300;
+        cursor: pointer;
+        font-size: 5.0vw;
+        line-height: 14vw;
+        margin: 0px;
+        position: relative;
+        z-index: 2;
+      }
+    }
+
+
+
+    @media(max-width:787px){
+
+      .titles .title .wrapper p {
+        display: inline-block;
+        color: #ffffff;
+        font-weight: 400;
+        cursor: pointer;
+        font-size: 5.0vw;
+        line-height: 14vw;
+        margin: 0px;
+        position: relative;
+        z-index: 2;
+      }
+
+    }
+
+
+

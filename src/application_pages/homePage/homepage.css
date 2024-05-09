@@ -1,0 +1,68 @@
+.popup {
+  /* position: relative;
+  z-index: 99; */
+}
+/* .popup:before{
+  content: "";
+
+} */
+.close {
+  position: absolute;
+  top: 10px !important;
+  right: 15px !important;
+  width: 30px;
+  max-width: 30px;
+  height: auto;
+  background-color: transparent;
+  cursor: pointer;
+  z-index: -1;
+}
+.popup_wrapper {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  /* height: 100%; */
+  z-index: 32;
+  transform: translate(-50%, -50%);
+  width: 40%;
+  top: 50%;
+}
+
+@media (min-width: 1500px) {
+  .popup_wrapper {
+    width: 40%;
+    top: 50%;
+  }
+}
+@media (max-width: 1199px) {
+  .popup_wrapper {
+    width: 50%;
+    top: 50%;
+  }
+}
+@media (max-width: 991px) {
+  .popup_wrapper {
+    width: 70%;
+    top: 50%;
+  }
+}
+@media (max-width: 767px) {
+  .popup_wrapper {
+    width: 68%;
+    top: 50%;
+  }
+}
+@media (max-width: 575px) {
+  .popup_wrapper {
+    width: 80%;
+    top: 50%;
+  }
+}
+.close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20px;
+  cursor: pointer;
+}

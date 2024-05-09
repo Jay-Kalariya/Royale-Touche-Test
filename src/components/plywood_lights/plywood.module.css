@@ -1,0 +1,224 @@
+.plywood_lights_outer {
+  display: flex;
+}
+.plywood_lights_one {
+  width: 60%;
+}
+.plywood_lights_text_outer {
+  /* padding: 13rem 4rem 8rem 3rem; */
+  padding: 7rem 4rem 5rem 3rem;
+  width: 79%;
+}
+.plywood_lights_text {
+  color: #c3a464;
+  font-size: 37px;
+  text-transform: uppercase;
+  font-weight: 600;
+  line-height: 144.5%;
+}
+.plywood_lights_small_text {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 158%;
+}
+.plywood_lights_two {
+  width: 40%;
+  background-color: #c3a464;
+  position: relative;
+}
+.plywood_wall_light {
+  position: absolute;
+  left: 48%;
+  top: 0;
+}
+.plywood_promax {
+  max-width: 100%;
+  height: auto;
+}
+.plywood_promaxplus {
+  max-width: 100%;
+  height: auto;
+}
+.plywood_standing_lamp {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.thickness_text {
+  color: white;
+  font-size: 37px;
+  text-transform: uppercase;
+  font-weight: 600;
+  line-height: 144.5%;
+  padding-top: 95px;
+  padding-left: 55px;
+}
+.thickness_text_inner {
+  color: #fff;
+  font-size: 30px;
+  text-transform: lowercase;
+  font-weight: 400;
+  line-height: 144.5%;
+}
+.plywood_desk {
+  color: transparent;
+  position: absolute;
+  width: 100%;
+  left: -15rem;
+  bottom: 0;
+}
+.promaxxx_img{
+  display: flex;
+  gap: 4rem;
+  width: 80%;
+  padding-top: 40px;
+  /* padding-left: 55px; */
+  /* padding-right: 55px; */
+}
+
+.plywood_wall_light_mobile {
+  display: none;
+}
+@media (max-width: 1440px) {
+  .plywood_desk {
+    left: -7rem;
+    bottom: 0;
+    max-width: 100%;
+  }
+  .plywood_lights_text_outer {
+    padding: 5.5rem 4rem 5.5rem 3rem;
+    width: 79%;
+  }
+}
+
+@media (max-width: 1366px) {
+  .thickness_text_inner {
+    font-size: 22px;
+  }
+}
+@media (max-width: 1199px) {
+  .plywood_lights_text_outer {
+    padding: 4rem 4rem 5rem 3rem;
+    width: 95%;
+  }
+  .plywood_desk {
+    left: -5rem;
+    bottom: 0;
+  }
+  .thickness_text {
+    color: #fff;
+    font-size: 30px;
+    padding-top: 55px;
+    padding-left: 55px;
+  }
+  .thickness_text_inner {
+    font-size: 22px;
+  }
+  .plywood_lights_small_text {
+    font-size: 20px;
+  }
+}
+@media (max-width: 991px) {
+  .plywood_lights_text_outer {
+    padding: 3rem 5rem 3rem 2rem;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+  }
+  .plywood_desk {
+    display: block;
+    left: -2rem;
+    bottom: 0;
+  }
+  .thickness_text {
+    font-size: 28px;
+    padding-top: 50px;
+    padding-left: 30px;
+  }
+  .thickness_text_inner {
+    font-size: 20px;
+  }
+  .promaxxx_img{
+    display: flex;
+    gap: 3rem;
+    padding-top: 40px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  /* .plywood_wall_light {
+    position: absolute;
+    left: 45%;
+    top: 0;
+  } */
+}
+@media (max-width: 767px) {
+  .plywood_lights_outer {
+    flex-direction: column;
+  }
+  .plywood_lights_one {
+    width: 100%;
+  }
+  .plywood_lights_two {
+    width: 100%;
+    position: relative;
+    height: 697px;
+  }
+  .plywood_wall_light {
+    display: none;
+  }
+  .plywood_wall_light_mobile {
+    display: block;
+  }
+  .plywood_desk {
+    left: -1rem;
+    display: block;
+    bottom: 0;
+  }
+  .plywood_lights_text_outer {
+    padding: 2rem;
+    width: 100%;
+  }
+  .plywood_lights_small_text {
+    font-size: 18px;
+    margin: 10px 0 0;
+  }
+}
+
+@media (max-width: 425px) {
+  .plywood_lights_text {
+    font-size: 34px;
+    font-weight: 600;
+  }
+
+  .plywood_lights_small_text {
+    font-size: 18px;
+    margin: 0px 0 0;
+  }
+  .thickness_text {
+    font-size: 25px;
+    padding-top: 20px;
+    padding-left: 30px;
+  }
+  .thickness_text_inner {
+    font-size: 18px;
+  }
+}
+@media (max-width: 375px) {
+ 
+}
+@media (max-width: 320px) {
+  .plywood_lights_text {
+    font-size: 28px;
+    font-weight: 600;
+  }
+  .thickness_text {
+    font-size: 25px;
+    padding-top: 20px;
+    padding-left: 20px;
+  }
+  .plywood_lights_small_text {
+    font-size: 16px;
+    margin: 0px 0 0;
+  }
+}

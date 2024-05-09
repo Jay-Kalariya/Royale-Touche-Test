@@ -1,0 +1,93 @@
+.SmartChoice_section {
+  background-color: #f2f2f2;
+}
+
+.SmartChoice_table {
+  padding: 3rem 3rem;
+}
+
+.SmartChoice_heading span {
+  font-weight: 999;
+}
+
+.SmartChoice_table table {
+  border: 2px solid #f2f2f2;
+  color: white;
+  background-color: #0f8a83;
+  /* border-radius: 20px; */
+  text-align: center;
+  width: 100%;
+  border-spacing: 0px;
+}
+
+.SmartChoice_table td,
+.SmartChoice_table th {
+  border-left: 2px solid #f2f2f2;
+  padding: 15px;
+  text-align: center;
+}
+
+.SmartChoice_table tr:nth-child(odd) {
+  background-color: #99d8d56f;
+}
+
+.SmartChoice_table tr:first-child td:first-child {
+  background-color: #c3a464;
+  color: black;
+}
+
+.SmartChoice_table tr:first-child td:first-child span {
+  font-weight: 900;
+}
+
+.SmartChoice_table tr:nth-child(2) th:nth-child(1) {
+  background-color: #489585; /* nth-child(2)ckground color */
+  color: #ffff;
+}
+
+.SmartChoice_table tr:nth-child(2) th:nth-child(2) {
+  background-color: #ffff;
+  color: #0f8a83;
+}
+
+.SmartChoice_table tr:nth-child(2) th:nth-child(3) {
+  background-color: yellow;
+  color: red; /* Second td background color */
+}
+
+.SmartChoice_table tr:nth-child(2) th:nth-child(3) span {
+  color: green; /* Second td background color */
+}
+
+.SmartChoice_table tr:nth-child(2) th:nth-child(4) {
+  background-color: black;
+  color: white; /* Second td background color */
+}
+
+@media screen and (max-width: 991px) {
+  .SmartChoice_table {
+    padding: 4rem 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .SmartChoice_table {
+    padding: 3rem 0;
+    overflow-x: auto;
+    width: 100%;
+    white-space: nowrap;
+  }
+
+  .SmartChoice_table td,
+  .SmartChoice_table th {
+    border-left: 2px solid #f2f2f2;
+    padding: 8px 6px;
+    font-size: 12px;
+    text-align: center;
+  }
+
+  .SmartChoice_table td:first-child {
+    padding: 20px 5px;
+  }
+}
+

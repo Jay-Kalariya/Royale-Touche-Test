@@ -1,0 +1,52 @@
+.smallText {
+      text-align: center;
+      padding: 109px 0 94px;
+      background-color: #D9D9D9;
+    }
+    .wrapper {
+      width: 985px;
+      margin: 0 auto;
+    }
+    .wrapper p {
+      color: #000;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 165.5%;
+      margin: 0 0 20px;
+    }
+    .wrapper p span {
+      color: #006F69;
+    }
+    .wrapper p:last-child {
+      margin: 0;
+    }
+    @media (max-width: 1199px) {
+      .wrapper {
+        width: 900px;
+      }
+    }
+    @media (max-width: 991px) {
+      .wrapper {
+        width: 720px;
+      }
+      .smallText {
+        padding: 80px 0 68px;
+      }
+    }
+    @media (max-width: 767px) {
+      .wrapper {
+        width: 95%;
+      }
+      .wrapper p {
+        padding: 0 10px;
+      }
+      .smallText {
+        padding: 65px 0 55px;
+      }
+    }
+    
+    
+    
+    
+    

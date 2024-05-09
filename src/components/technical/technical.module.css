@@ -1,0 +1,76 @@
+/* TechnicalSpecifications.module.css */
+.container {
+  margin: auto;
+  padding: 60px 60px;
+  color: black;
+  background-color: #d0af6b;
+}
+
+.title {
+  color: #000;
+  font-size: 50px;
+  margin-bottom: 2rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
+.specification {
+  display: flex;
+  padding: 16px;
+  border-bottom: 1px solid #816835;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.label {
+  font-size: 16px;
+  font-style: normal;
+  width: 50%;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.value {
+  color: #fff;
+  font-size: 16px;
+  width: 50%;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.button {
+  display: block;
+  font-family: lato;
+  margin-top: 2rem;
+  padding: 15px 30px;
+  font-size: 20px;
+  background-color: transparent;
+  border: 1px solid #000;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  /* Tablet */
+  .container {
+    padding: 12px;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .value {
+    text-align: left;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Mobile */
+  .title {
+    font-size: 27px;
+    margin-left: 14px;
+    font-weight: 400;
+  }
+}

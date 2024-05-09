@@ -1,0 +1,4 @@
+.inner_header_animation {
+  margin: 0 3px;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}

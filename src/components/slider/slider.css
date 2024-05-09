@@ -1,0 +1,7 @@
+.disable{
+    display: none;
+  }
+  .swiper-button-disabled.disable{
+    display: block;
+    cursor: auto;
+  }

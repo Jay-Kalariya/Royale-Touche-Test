@@ -1,0 +1,267 @@
+.ply_bock {
+  display: flex;
+  height: 100vh;
+}
+
+.link{
+  height: 100%;
+  display: flow-root;
+}
+.ply_side1 {
+  width: 50%;
+  position: relative;
+  cursor: pointer;
+  background: #C3A464;
+}
+.ply_side1:hover{
+  background: #d1b06e;
+}
+.block_side2 {
+  width: 50%;
+  position: relative;
+  cursor: pointer;
+  background: #006F69;
+}
+.block_side2:hover{
+  background: #017570;
+}
+.plywood {
+  margin-top: 10rem;
+}
+.plywood_title {
+  font-size: 90px;
+  padding: 123px 0 0;
+  font-style: normal;
+  text-transform: uppercase;
+  font-weight: 300;
+  text-align: center;
+  color: black;
+}
+.blockboard {
+  margin-top: 10rem;
+}
+.blockboard_title {
+  font-size: 100px;
+  padding: 123px 0 0;
+  font-style: normal;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 300;
+  color: rgb(255, 255, 255);
+}
+
+.big_arrow_outer {
+  position: absolute;
+  bottom: 3rem;
+  right: 5rem;
+}
+
+@media (min-width:1600px){
+  .blockboard_title {
+    font-size: 110px;
+    padding: 248px 0 0;
+    font-style: normal;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 300;
+    color: rgb(255, 255, 255);
+  }
+
+  .plywood_title {
+    font-size: 110px;
+    padding: 248px 0 0;
+    font-style: normal;
+    text-transform: uppercase;
+    font-weight: 300;
+    text-align: center;
+    color: black;
+  }
+
+
+}
+
+@media (max-width: 1370px){
+  .blockboard_title {
+    font-size: 90px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .ply_bock {
+    cursor: pointer;
+    display: flex;
+    height: 100vh;
+  }
+  .ply_side1 {
+    width: 50%;
+    background: #C3A464;
+  }
+  .block_side2 {
+    width: 50%;
+    background: #006F69;
+  }
+  .plywood {
+    margin-top: 10rem;
+  }
+  .plywood_title {
+    font-size: 63px;
+    font-style: normal;
+    font-weight: 300;
+    text-align: center;
+    color: black;
+  }
+  .blockboard {
+    margin-top: 10rem;
+  }
+  .blockboard_title {
+    font-size: 63px;
+    font-style: normal;
+    text-align: center;
+    font-weight: 300;
+    color: black;
+  }
+  .big_arrow_outer {
+    margin-left: 20rem;
+    margin-top: 15rem;
+  }
+}
+@media (max-width: 991px) {
+  .ply_bock {
+    display: flex;
+    height: 100vh;
+  }
+  .ply_side1 {
+    width: 100%;
+    background: #C3A464;
+  }
+  .blockboard_title {
+    font-size: 50px;
+    padding: 150px 0 0;
+  }
+  .plywood_title {
+    font-size: 50px;
+    padding: 150px 0 0;
+  }
+  .block_side2 {
+    width: 100%;
+    background: #006F69;
+  }
+  .blockboard {
+    margin-top: 10rem;
+  }
+  .plywood {
+    margin-top: 10rem;
+  }
+  .big_arrow_outer {
+    margin-left: 18rem;
+    margin-top: 20rem;
+  }
+  .plywood_text {
+    color: #000;
+    width: 100%;
+    transform: none;
+    padding: 10px 12px 0px 45px;
+    font-size: 18px;
+  }
+  .blockboard_text {
+    color: #000;
+    width: 100%;
+    transform: none;
+    padding: 10px 12px 0px 45px;
+    font-size: 18px;
+  }
+}
+@media (max-width: 768px) {
+  .ply_bock {
+    display: flex;
+    height: 100vh;
+  }
+  .ply_side1 {
+    width: 100%;
+    background: #C3A464;
+  }
+  .block_side2 {
+    width: 100%;
+    background: #006F69;
+  }
+  .blockboard {
+    margin-top: 10rem;
+  }
+  .plywood {
+    margin-top: 10rem;
+  }
+  .plywood_text {
+    color: #000;
+    width: 100%;
+    transform: none;
+    padding: 10px 12px 0px 35px;
+    font-size: 18px;
+  }
+  .blockboard_text {
+    color: #000;
+    width: 100%;
+    transform: none;
+    padding: 10px 12px 0px 45px;
+    font-size: 18px;
+  }
+}
+@media (max-width: 575px) {
+  .blockboard_title {
+    font-size: 47px;
+    padding: 0;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .plywood_title {
+    font-size: 47px;
+    padding: 0;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .ply_bock {
+    display: block;
+    height: 100vh;
+  }
+  .ply_side1 {
+    width: 100%;
+    height: 50%;
+    background: #006F69;
+  }
+  .block_side2 {
+    width: 100%;
+    height: 50%;
+    background: #C3A464;
+    
+  }
+  .blockboard {
+    margin-top: 0;
+    height: 100%;
+  }
+  .plywood {
+    margin-top: 0;
+    height: 100%;
+  }
+  .big_arrow_outer {
+    bottom: 0;
+    right: 0;
+  }
+  .big_arrow {
+    width: 40%;
+  }
+  
+}
+
+
+
+@media (max-width: 425px) {
+  .blockboard_title {
+    font-size: 45px;
+  }
+
+}

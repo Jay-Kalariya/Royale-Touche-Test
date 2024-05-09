@@ -1,0 +1,17 @@
+
+
+
+.hellom{
+  /* float: left; */
+  display: block;
+  border: none;
+}
+@media (max-width: 787px) {
+
+  .iframe_outer{
+    height: 50vh;
+  }
+  .map_height{
+    height: 50vh ;
+  }
+}

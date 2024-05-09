@@ -1,0 +1,133 @@
+.Main_Circle_Container {
+  padding-top: 10rem;
+  padding-bottom: 5rem;
+}
+.Main_Circle_Section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.Main_Circle_Image_Section {
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 1px solid white;
+}
+.Image_main {
+  border-radius: 50%;
+  display: block;
+  max-width: 100%;
+  height: auto;
+  transition: 0.4s ease;
+}
+.Main_Circle_Image_Section:hover .Image_main {
+  transform: scale(1.1);
+}
+.Main_circle_overlay_text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.Overlay_text {
+  color: #fff;
+  font-size: 25.178px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 144.5%;
+}
+.Circle_Text_Container {
+  padding-top: 5rem;
+  text-align: center;
+}
+.Circle_Text {
+  margin: 0 auto;
+  width: 55%;
+  color: #fff;
+  text-align: center;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 129%;
+  letter-spacing: 0.4px;
+}
+@media only screen and (min-width: 1500px) {
+  .Main_Circle_Section {
+    gap: 5rem;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .Main_Circle_Section {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .Circle_Text {
+    width: 82%;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .Circle_Text {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .Main_Circle_Container {
+    padding-top: 4rem;
+  }
+  .Main_Circle_Section {
+    flex-direction: column;
+  }
+  .Overlay_text {
+    font-size: 20px;
+  }
+  .Circle_Text {
+    width: 100%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+@media only screen and (max-width: 425px) {
+  .Main_Circle_Container {
+    padding-top: 6rem;
+    padding-bottom: 3rem;
+  }
+
+  .Circle_Text {
+    font-size: 16px;
+  }
+  .Overlay_text {
+    font-size: 18px;
+  }
+  .Circle_Text {
+    width: 100%;
+  }
+  .Circle_Text_Container {
+    padding-top: 3rem;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .Main_Circle_Container {
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+  }
+  .Overlay_text {
+    font-size: 16px;
+  }
+
+  .Circle_Text {
+    font-size: 16px;
+  }
+  .Circle_Text {
+    width: 100%;
+    font-size: 15px;
+  }
+}
+
+@media only screen and (max-width: 280px) {
+  .Circle_Text {
+    font-size: 11px;
+  }
+}

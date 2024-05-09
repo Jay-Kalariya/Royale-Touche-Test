@@ -1,0 +1,426 @@
+.Form_Container {
+  background-color: white;
+}
+.Form_Header {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+.Form_Header_Content {
+  text-align: center;
+}
+.Form_Header_text {
+  color: #0f8a83;
+  text-align: center;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  text-transform: uppercase;
+}
+.Form_Header_text1 {
+  color: #0f8a83;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+}
+.RT_Form_main {
+  padding-left: 20rem;
+  padding-right: 20rem;
+}
+.RT_Form_Flex {
+  display: flex;
+  gap: 4rem;
+  height: 130px;
+  padding-bottom: 1.5rem;
+}
+.RT_Form_field {
+  width: 100%;
+}
+.submit{
+  font-size: 20px;
+  padding-top: 1rem;
+}
+.form_Label {
+  padding-bottom: 0.5rem;
+  color: #000;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: capitalize;
+}
+.input_field {
+  margin-top: 0.5rem;
+  width: 100%;
+  outline: none;
+  border: none;
+  color: #838383;
+  font-family: "LatoRegular";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  /* text-transform: capitalize; */
+  background: #d9d9d9;
+  padding: 1rem 1rem 1rem 1rem;
+}
+.RT_Form_field_address {
+  width: 70%;
+}
+.RT_Form_field_pincode {
+  width: 30%;
+}
+.RT_Form_field_dealer {
+  width: 50%;
+}
+.Form_Second_Part {
+  padding-top: 4rem;
+}
+.Form_btn_Outer {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  text-align: center;
+}
+
+.Form_btn {
+  border-radius: 500px;
+  padding: 1.5rem 2.5rem 1.5rem 2.5rem;
+  border: 1.3px solid #fff;
+  background: #0f8a83;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.invoice_upload_container {
+ 
+  padding-left: 9rem;
+  padding-right: 9rem;
+}
+.upload_invoice_text {
+  color: #000;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  text-transform: capitalize;
+}
+
+.invoice_Main {
+  display: flex;
+  gap: 3rem;
+  margin-top: 1rem;
+}
+.inovoice_inner_flex {
+  width: 100%;
+}
+.invc_img{
+  cursor: pointer;
+}
+.invoice_inner_cards {
+  background-color: #d9d9d9;
+  height: 340px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+}
+.invoice_flex_text_outer {
+  text-align: center;
+  padding-top: 1rem;
+}
+.uploadedInvoiceText {
+  text-align: center;
+  color: black;
+}
+.Toster_notification {
+  font-size: 20px;
+}
+.invoice_flex_text_inner {
+  color: #000;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  text-transform: capitalize;
+}
+.form_last_section {
+  padding-top: 5rem;
+  height: 5px;
+  padding-bottom: 3rem;
+}
+.form_last_section_content {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.forms_terms_condition {
+  cursor: pointer;
+  color: #000;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-decoration-line: underline;
+  text-transform: capitalize;
+}
+.form_agree_content {
+  color: #000;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  text-transform: capitalize;
+}
+.Form_btn_Outer_Main {
+  text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 5rem;
+}
+.Form_btn_inner {
+  outline: none;
+  border: none;
+  color: #fff;
+  background: #0f8a83;
+  padding: 1.5rem 3rem 1.5rem 3rem;
+  font-size: 20px;
+  border-radius: 500px;
+  border: 1.3px solid #fff;
+  font-style: normal;
+  cursor: pointer;
+  font-weight: 400;
+  line-height: normal;
+}
+.Toster_notification {
+  background-color: red;
+}
+.check{
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 1500px) {
+  .invoice_upload_container {
+    padding-left: 13rem;
+    padding-right: 13rem;
+  }
+  .invoice_inner_cards {
+    height: 400px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .RT_Form_main {
+    padding-left: 4.5rem;
+    padding-right: 4.5rem;
+  }
+  .invoice_inner_cards {
+    height: 230px;
+  }
+  .invoice_upload_container {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .RT_Form_main {
+    padding-left: 4.5rem;
+    padding-right: 4.5rem;
+  }
+  .invoice_inner_cards {
+    height: 230px;
+  }
+  .invoice_upload_container {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+  .RT_Form_Flex{
+    height: auto;
+  }
+}
+@media (max-width: 768px) {
+  .RT_Form_main {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+  .invoice_inner_cards {
+    height: 190px;
+  }
+  .invoice_upload_container {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+@media (max-width: 575px) {
+  
+  .RT_Form_main {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .checkbox {
+    margin-bottom: 0px;
+  }
+  .invoice_Main {
+    flex-direction: column;
+  }
+  .forms_terms_condition {
+    font-size: 15px;
+  }
+  .form_agree_content {
+    font-size: 15px;
+  }
+  .RT_Form_Flex {
+    gap: 1rem;
+  }
+  .form_Label {
+    font-size: 15px;
+  }
+  .input_field {
+    font-size: 15px;
+  }
+  .Form_Header_text {
+    font-size: 18px;
+  }
+  .Form_Second_Part {
+    padding-top: 2rem;
+  }
+  .Form_btn_Outer {
+    padding-top: 2rem;
+  }
+  .Form_btn_Outer_Main {
+    padding-top: 0rem;
+  }
+  .Form_Header_text1 {
+    font-size: 18px;
+  }
+  .Form_Header {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  .Form_btn {
+    padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+    font-size: 16px;
+  }
+  .Form_btn_inner {
+    padding: 1rem 2.3rem 1rem 2.3rem;
+    font-size: 16px;
+  }
+  .RT_Form_field_address {
+    width: 100%;
+  }
+  .RT_Form_field_pincode {
+    width: 100%;
+  }
+  .RT_Form_field_dealer {
+    width: 100%;
+  }
+  .RT_Form_Flex {
+    padding-bottom: 1rem;
+    flex-direction: column;
+  }
+  .upload_invoice_text {
+    font-size: 16px;
+  }
+  .invoice_Main {
+    gap: 2rem;
+  }
+  .form_last_section {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    height: auto;
+  }
+}
+
+@media (max-width: 425px) {
+  .RT_Form_main {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .checkbox {
+    margin-bottom: 0px;
+  }
+  .invoice_Main {
+    flex-direction: column;
+  }
+  .forms_terms_condition {
+    font-size: 15px;
+  }
+  .form_agree_content {
+    font-size: 15px;
+  }
+  .RT_Form_Flex {
+    gap: 1rem;
+  }
+  .form_Label {
+    font-size: 15px;
+  }
+  .input_field {
+    font-size: 15px;
+  }
+  .Form_Header_text {
+    font-size: 18px;
+  }
+  .Form_Second_Part {
+    padding-top: 2rem;
+  }
+  .Form_btn_Outer {
+    padding-top: 2rem;
+  }
+  .Form_btn_Outer_Main {
+    padding-top: 0rem;
+  }
+  .Form_Header_text1 {
+    font-size: 18px;
+  }
+  .Form_Header {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  .Form_btn {
+    padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+    font-size: 16px;
+  }
+  .Form_btn_inner {
+    padding: 1rem 2.3rem 1rem 2.3rem;
+    font-size: 16px;
+  }
+  .RT_Form_field_address {
+    width: 100%;
+  }
+  .RT_Form_field_pincode {
+    width: 100%;
+  }
+  .RT_Form_field_dealer {
+    width: 100%;
+  }
+  .RT_Form_Flex {
+    padding-bottom: 1rem;
+    flex-direction: column;
+  }
+  .upload_invoice_text {
+    font-size: 16px;
+  }
+  .invoice_Main {
+    gap: 2rem;
+  }
+  .form_last_section {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
+@media (max-width:375px){
+  .checkbox {
+    margin-bottom: 15px;
+  }
+}

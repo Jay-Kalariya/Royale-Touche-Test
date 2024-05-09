@@ -1,0 +1,386 @@
+.nav_menu_names {
+  color: #006f69;
+  font-size: 16px;
+  font-style: normal;
+  z-index: 1;
+  position: absolute;
+  filter: drop-shadow(1px 1px 4px black);
+  top: 2rem;
+  cursor: pointer;
+  left: 2rem;
+  font-weight: 500;
+  line-height: normal;
+}
+.btn_outer {
+  position: absolute;
+  top: 5rem;
+  right: 7rem;
+}
+.inner_header_text {
+  position: absolute;
+  top: 50%;
+
+  width: 76%;
+  left: 10rem;
+  color: white;
+}
+.inner_header_t1 {
+  font-size: 36px;
+  display: flex;
+  flex-wrap: wrap;
+  font-style: normal;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.inner_header_t2 {
+  font-size: 12px;
+  margin-top: 0.5rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 144.5%;
+}
+
+.inner_header_big {
+  font-size: 120px;
+  font-style: normal;
+  font-weight: 500;
+  left: -7rem;
+  position: absolute;
+  top: 8rem;
+  width: 148%;
+}
+
+.homepage_image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  filter: brightness(0.8);
+}
+.inner_image_outer {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 72/35;
+}
+
+@media (min-width: 1600px) and (max-width: 1920px) {
+  .inner_header_big {
+    font-size: 117px;
+    font-style: normal;
+    font-weight: 500;
+    left: -7rem;
+    position: absolute;
+    top: 18rem;
+    width: 112%;
+  }
+
+  .homepage_image {
+    object-fit:fill;
+  }
+
+
+  .inner_header_t1 {
+    font-size: 36px;
+    font-style: normal;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  .inner_header_text {
+    position: absolute;
+    top: 50%;
+    width: 70%;
+    left: 10rem;
+    color: white;
+  }
+
+  .inner_image_outer {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 67/35;
+  }
+}
+@media (max-width: 1370px)
+{
+  .inner_image_outer {
+    height: 100vh;
+  }
+}
+@media (max-width: 1199px) {
+  .inner_header_big {
+    font-size: 100px;
+    font-style: normal;
+    font-weight: 500;
+    left: 0rem;
+    position: absolute;
+    /* margin-top: 10rem; */
+    top: 1rem;
+    /* width: 100%; */
+  }
+  .inner_image_outer {
+    height: 100vh;
+  }
+  .inner_header_text {
+    left: 3rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .inner_header_text {
+    position: absolute;
+    top: 70%;
+    width: 88%;
+    left: 2rem;
+    color: white;
+  }
+  .inner_header_t1 {
+    font-size: 33px;
+    font-style: normal;
+    font-weight: 500;
+  }
+}
+
+@media (max-width: 991px) {
+  .logo {
+    height: 100%;
+    width: 100%;
+  }
+  .btn_outer {
+    position: absolute;
+    top: 2rem;
+    right: 5rem;
+  }
+
+  .inner_header_text {
+    position: absolute;
+    top: 70%;
+    width: 88%;
+    left: 2rem;
+    color: white;
+  }
+  .inner_header_t1 {
+    font-size: 33px;
+    font-style: normal;
+    font-weight: 500;
+  }
+
+  .inner_header_big {
+    font-size: 83px;
+    font-style: normal;
+    font-weight: 500;
+    left: 0;
+    position: absolute;
+    /* margin-top: 10rem; */
+    top: 5rem;
+    /* width: 100%; */
+  }
+  .nav_menu_names {
+    color: #006f69;
+    font-size: 16px;
+    font-style: normal;
+    z-index: 1;
+    width: 23%;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    font-weight: 500;
+    line-height: normal;
+  }
+  .inner_image_outer {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1;
+  }
+}
+
+@media (min-width: 574px) and (max-width: 787px) {
+  .inner_header_big {
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 500;
+    left: 0rem;
+    position: absolute;
+    /* margin-top: 10rem; */
+    top: -7rem;
+    /* width: 100%; */
+  }
+}
+
+@media (max-width: 787px) {
+  .logo {
+    height: 100%;
+    width: 100%;
+  }
+
+  .btn_outer {
+    position: absolute;
+    top: 2rem;
+    right: 5rem;
+  }
+  .nav_menu_names {
+    color: #006f69;
+    font-size: 16px;
+    font-style: normal;
+    z-index: 1;
+    width: 23%;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    font-weight: 500;
+    line-height: normal;
+  }
+  .inner_header_text {
+    left: 1.5rem;
+    width: 80%;
+    bottom: 40px;
+    top: auto;
+  }
+  .inner_header_t1 {
+    font-size: 28px;
+  }
+  .inner_image_outer {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1;
+    height: 100vh;
+    top: auto;
+    /* bottom: 70px; */
+  }
+}
+@media (max-width: 575px) {
+  .inner_header_text {
+    left: 1rem;
+    width: 90%;
+  }
+
+.homepage_image {
+  object-fit:cover;
+}
+
+
+
+  .inner_header_big {
+    font-size: 44px;
+    font-style: normal;
+    font-weight: 500;
+    left: 0rem;
+    position: absolute;
+    top: 8rem;
+  }
+
+
+
+  
+  .inner_header_t1 {
+    font-size: 28px;
+  }
+  .inner_image_outer {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1;
+    height: 80vh;
+    top: auto;
+  }
+}
+
+@media (max-width: 430px) {
+  .inner_header_big {
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 500;
+    left: 0rem;
+    position: absolute;
+    top: 6rem;
+  }
+
+  .inner_header_text {
+    position: absolute;
+    top: 62%;
+    width: 88%;
+    left: 2rem;
+    color: white;
+  }
+
+  .inner_header_text {
+    left: 1.5rem;
+    width: 80%;
+  }
+  .inner_header_t1 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 425px) {
+  .inner_header_big {
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 500;
+    left: 0rem;
+    position: absolute;
+    top: 6rem;
+  }
+
+  .inner_header_text {
+    position: absolute;
+    top: 62%;
+    width: 88%;
+    left: 2rem;
+    color: white;
+  }
+
+  .inner_header_text {
+    left: 1.5rem;
+    width: 90%;
+  }
+  .inner_header_t1 {
+    font-size: 20px;
+  }
+}
+@media (max-width: 375px) {
+  .inner_header_text {
+    top: 40%;
+  }
+
+  .inner_header_text {
+    position: absolute;
+    top: 62%;
+    width: 88%;
+    left: 1rem;
+    color: white;
+  }
+
+  .inner_header_t1 {
+    font-size: 18px;
+  }
+
+  .inner_header_big {
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 500;
+    left: 0rem;
+    position: absolute;
+    top: 5.5rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .inner_header_big {
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 500;
+    left: 0rem;
+    position: absolute;
+    top: 5.5rem;
+  }
+
+  .inner_header_t1 {
+    font-size: 16px;
+  }
+
+  .inner_header_text {
+    position: absolute;
+    top: 55%;
+    width: 88%;
+    left: 1rem;
+    color: white;
+  }
+}

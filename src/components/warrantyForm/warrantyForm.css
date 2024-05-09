@@ -1,0 +1,223 @@
+.p-dropdown-items {
+  background-color: white;
+  margin-top: 0.3rem;
+  color: #838383;
+  font-size: 20px;
+  border-radius: 10px;
+  font-style: normal;
+  border: 1px solid #838383;
+  font-weight: 300;
+  line-height: normal;
+}
+.p-dropdown-item {
+  padding-top: 9px;
+  padding-left: 17px;
+  font-weight: 300;
+  border-bottom: 1px solid #838383;
+  border-radius: 10px;
+  padding-bottom: 9px;
+}
+.p-dropdown-item:hover{
+  background-color: #838383;
+  color: white;
+  transition: all 0.5s ease-in-out;
+  transition-duration: 0.5s;
+}
+.error {
+  color: red;
+  margin-top: 0.2rem;
+}
+.error1 {
+  color: red;
+  margin-left: 1.3rem;
+}
+#getFile0 {
+  display: none;
+}
+#getFile {
+  display: none;
+}
+#getFile1 {
+  display: none;
+}
+#getFile2 {
+  display: none;
+}
+#getFile3 {
+  display: none;
+}
+.text{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.svg_add{
+  height: 20px;
+  color: white;
+  fill: white;
+  padding-right: 0.5rem;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s;
+  -webkit-text-fill-color: #838383 !important;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.button-57 {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  font-family: "LatoRegular";
+  line-height: 15px;
+  padding: 20px 47px 18px;
+  font-size: 20px;
+  margin-top: 1.5rem;
+  border: 1px solid #006f69;
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+  z-index: 16;
+  background-color: #006f69;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-57 span:first-child {
+  position: relative;
+  font-family: "LatoRegular";
+  transition: color 600ms cubic-bezier(0.48, 0, 0.12, 1);
+  z-index: 10;
+}
+
+.button-57 span:last-child {
+  color: #006f69;
+  display: block;
+  position: absolute;
+  width: 100%;
+  font-family: "LatoRegular";
+  bottom: 0;
+  transition: all 500ms cubic-bezier(0.48, 0, 0.12, 1);
+  z-index: 100;
+  opacity: 0;
+  top: 70%;
+  left: 50%;
+  transform: translateY(225%) translateX(-50%);
+  height: 14px;
+  line-height: 13px;
+}
+
+.button-57:after {
+  content: "";
+  position: absolute;
+  bottom: -50%;
+  left: 0;
+  font-family: "LatoRegular";
+  width: 100%;
+  color: #000000;
+  height: 100%;
+  background-color: #ffffff;
+  border: none;
+  transform-origin: bottom center;
+  transition: transform 600ms cubic-bezier(0.48, 0, 0.12, 1);
+  transform: skewY(9.3deg) scaleY(0);
+  z-index: 50;
+}
+
+.button-57:hover:after {
+  transform-origin: bottom center;
+  border: 1px solid #006f69;
+  font-family: "LatoRegular";
+  transform: skewY(9.3deg) scaleY(2);
+}
+
+.button-57:hover span:last-child {
+  transform: translateX(-50%) translateY(-110%);
+  opacity: 1;
+  font-family: "LatoRegular";
+  transition: all 900ms cubic-bezier(0.48, 0, 0.12, 1);
+}
+
+/* remove button */
+.button-571 {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  font-family: "LatoRegular";
+  line-height: 15px;
+  padding: 20px 47px 18px;
+  font-size: 20px;
+  margin-top: 1.5rem;
+  border: 1px solid red;
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+  z-index: 16;
+  background-color: red;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-571 span:first-child {
+  position: relative;
+  font-family: "LatoRegular";
+  transition: color 600ms cubic-bezier(0.48, 0, 0.12, 1);
+  z-index: 10;
+}
+
+.button-571 span:last-child {
+  color: red;
+  display: block;
+  position: absolute;
+  width: 100%;
+  font-family: "LatoRegular";
+  bottom: 0;
+  transition: all 500ms cubic-bezier(0.48, 0, 0.12, 1);
+  z-index: 100;
+  opacity: 0;
+  top: 70%;
+  left: 50%;
+  transform: translateY(225%) translateX(-50%);
+  height: 14px;
+  line-height: 13px;
+}
+
+.button-571:after {
+  content: "";
+  position: absolute;
+  bottom: -50%;
+  left: 0;
+  font-family: "LatoRegular";
+  width: 100%;
+  color: #000000;
+  height: 100%;
+  background-color: #ffffff;
+  border: none;
+  transform-origin: bottom center;
+  transition: transform 600ms cubic-bezier(0.48, 0, 0.12, 1);
+  transform: skewY(9.3deg) scaleY(0);
+  z-index: 50;
+}
+
+.button-571:hover:after {
+  transform-origin: bottom center;
+  border: 1px solid red;
+  font-family: "LatoRegular";
+  transform: skewY(9.3deg) scaleY(2);
+}
+
+.button-571:hover span:last-child {
+  transform: translateX(-50%) translateY(-110%);
+  opacity: 1;
+  font-family: "LatoRegular";
+  transition: all 900ms cubic-bezier(0.48, 0, 0.12, 1);
+}
