@@ -228,65 +228,40 @@ const FormCommon = () => {
     useFormik({
       initialValues: initialValue,
       validationSchema: FormSchemas,
-      onSubmit={async (values, { setSubmitting, resetForm }) => {
-        try {
-          const formData = new FormData();
-          formData.append("name", values.name);
-          formData.append("email", values.email);
-          formData.append("phone", values.phone);
-          formData.append("image", values.image);
-          formData.append("message", values.message);
-          console.log("Form Data", formData);
-          console.log("file", values.image.name);
-          const response = await fetch(
-            "http://localhost:8000/sendmail",
-            {
-              method: "POST",
-              body: formData,
-            }
-          );
-
-          console.log(formData);
-          console.log("response", response);
-        } finally {
-          setSubmitting(false);
-          document.getElementById("formFile").value = "";
-          setUploadedFileName("")
-          resetForm();
+      onSubmit: (value, action) => {
+        console.log("value", value);
+        if (uploadedInvoice) {
+          console.log("Uploaded PDF file:", uploadedInvoice);
         }
-      
+        clearUploadedFile();
+        emailjs
+          .send(
+            "service_1yku1jq",  // service ID 
+            "template_tpgu78n",  // template
+            values,
+            "wUn63IsqXIdoy36Vc" // public key 
+          )
+          .then((response) => {
+            router.push("/thanks")
+            // toast.success("Form Submitted Successfully...");
+            resetForm();
+            console.log("Email sent successfully");
+            setSubmit(true);
+            clearUploadedFile();
+            setUploadedInvoice(null);
+            setUploadedInvoice1(null);
+            setUploadedInvoice2(null);
+            setUploadedInvoice3(null);
+            setSelectedProduct(null);
+            console.log("Email sent successfully:", response);
+            // resetForm();
+          })                              
+          .catch((error) => {
+            // toast.error("Error submitting form. Please try again.");
+            console.error("Email send error:", error);
+          });
+      },
     });
-      // onSubmit: (value, action) => {
-      //   console.log("value", value);
-      //   if (uploadedInvoice) {
-      //     console.log("Uploaded PDF file:", uploadedInvoice);
-      //   }
-      //   clearUploadedFile();
-      //   emailjs
-      //     .send(
-      //       "service_1yku1jq",  
-      //       "template_tpgu78n",  
-      //       values,
-      //       "wUn63IsqXIdoy36Vc" 
-      //     )
-      //     .then((response) => {
-      //       router.push("/thanks")
-      //       resetForm();
-      //       console.log("Email sent successfully");
-      //       setSubmit(true);
-      //       clearUploadedFile();
-      //       setUploadedInvoice(null);
-      //       setUploadedInvoice1(null);
-      //       setUploadedInvoice2(null);
-      //       setUploadedInvoice3(null);
-      //       setSelectedProduct(null);
-      //       console.log("Email sent successfully:", response);
-      //     })                              
-      //     .catch((error) => {
-      //       console.error("Email send error:", error);
-      //     });
-      // },
-    
   console.log("FINAL VALUES", values);
   console.log("response", formResponse.text);     
   
