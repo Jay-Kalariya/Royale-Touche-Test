@@ -36,7 +36,6 @@ const FormCommon = () => {
   ];
   const indexedCategories = categories.map((category, index) => ({
     ...category,
-
     index: index + 1,
   }));
   
@@ -155,7 +154,6 @@ const FormCommon = () => {
     Invoice_File3: "",
     agreeTerms: false,
   };
-  // const [submitAttempted, setSubmitAttempted] = useState(false);
   const [formResponse, setFormResponse] = useState("");
   const [sections, setSections] = useState([{}]);
   const [sectionValues, setSectionValues] = useState([initialValue]);
@@ -236,14 +234,13 @@ const FormCommon = () => {
         clearUploadedFile();
         emailjs
           .send(
-            "service_1yku1jq",  // service ID 
-            "template_tpgu78n",  // template
+            "service_1yku1jq", 
+            "template_tpgu78n",  
             values,
-            "wUn63IsqXIdoy36Vc" // public key 
+            "wUn63IsqXIdoy36Vc" 
           )
           .then((response) => {
             router.push("/thanks")
-            // toast.success("Form Submitted Successfully...");
             resetForm();
             console.log("Email sent successfully");
             setSubmit(true);
@@ -254,10 +251,8 @@ const FormCommon = () => {
             setUploadedInvoice3(null);
             setSelectedProduct(null);
             console.log("Email sent successfully:", response);
-            // resetForm();
           })                              
           .catch((error) => {
-            // toast.error("Error submitting form. Please try again.");
             console.error("Email send error:", error);
           });
       },
